@@ -1,0 +1,245 @@
+
+
+                  /* =========== GENERAL =========== */
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+                    /* =========== GLOBAL =========== */
+h1, h2, h3, h4, h5, h6 {
+    -webkit-font-smoothing: antialiased
+    text-rendering: optimizeLegibility;
+    font-weight: bold;
+}
+
+
+                    /* =========== NAV =========== */
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: black;
+    opacity: 0.8
+}
+
+.navbar ul li a img {
+    height: 30px;
+    width: 30px;
+}
+.navbar ul li {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar .login ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar ul li a {
+    display: block;
+    color: #808080;
+    text-align: center;
+    padding: 14px 16px 14px 16px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    color: white;
+}
+
+                    /* =========== HERO =========== */
+#hero{
+    width: auto;
+    height: 800px;
+    text-align: center;
+    background-image: url(../img/sunrise.jpg);
+    margin-top: -10px;  
+}
+
+#hero h1 {
+    color: white;
+    padding: 100px;
+}
+
+
+                    /* =========== DESCRIPTION =========== */
+
+#description{
+    width: 960px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+#description h2 {
+    text-align: center
+    text
+}
+
+                    /* =========== MODAL =========== */
+
+.modalDialog {
+    position: fixed;
+    font-family: 'Montserrat', sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 500px;
+    position: relative;
+    margin: 10% auto;
+    background: white;
+}
+
+.close {
+    background: #606061;
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    -mox-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background: #808080;
+}
+
+                    /* =========== FORMS =========== */
+
+.login{
+    font-family: 'Montserrat', sans-serif;
+    width: 500px;
+    padding: 30px;
+    background: #fff;
+    margin: 50px auto;
+}
+
+.login h2{
+    background: #4d4d4d;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+    margin: -30px -30px 30px -30px;
+}
+
+input[type = 'text'],
+input[type = 'date'],
+input[type = 'datetime'],
+input[type = 'email'],
+input[type = 'search'],
+input[type = 'time'],
+input[type = 'url'],
+input[type = 'password'],
+textarea,
+select { 
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -mox-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px 'Montserrat', sans-serif;
+    height: 45px;
+}
+
+.login input[type = 'submit'],
+.login input[type = 'button'] {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #4d4d4d;
+    color: white;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.login input[type = 'submit']:hover,
+.login input[type = 'button']:hover {
+    background: #808080;
+}
+
+.search input[type = 'search'] {
+    color: white;
+    text-align: center;
+    background-image: url(../img/search_icon.png);
+    background-position: 4px;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.search input[type = 'search']:hover {
+    background: rgba(255, 255, 255, .08);
+}
+
+
+                    /* =========== FOOTER =========== */
+
+footer ul {
+    list-style-type: none;
+    margin: 600px 0px 0px;
+    padding: 0;
+    overflow: auto;
+    background-color: black;
+    opacity: 0.8;
+}
+
+footer ul li {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+footer ul li a,
+footer ul li {
+    display: block;
+    color: #808080;
+    text-align: center;
+    padding: 14px 16px 14px 16px;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: white;
+}
