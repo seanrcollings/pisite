@@ -59,7 +59,8 @@ html = '''
 </html>
 ''' % uptime_output
 
-file = open('stat.html', 'w')
+file = open('/var/www/html/stats.html', 'w')
 file.write(html)
+print("stat.html successfully written to!")
 file.close()
 
