@@ -43,6 +43,7 @@ html = '''
 		</header>
 
   <body>
+  	<h2>Current Uptime Statistic</h2>
     <div>%s</div>
   </body>
 <section id = 'classes'>
