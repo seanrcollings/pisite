@@ -14,8 +14,8 @@ html = '''
 		<link href = 'css/normalize.css' rel = 'stylesheet' type = 'text/css'>
 		<link href = 'css/w3.css' rel = 'stylesheet' type = 'text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-		</head>
-	<body>
+		</head
+>	<body>
 		<header>
 			<div class = 'navbar'>
 				<nav>
@@ -44,7 +44,7 @@ html = '''
 
   <body>
   	<h2>Current Uptime Statistic</h2>
-    <div>%s</div>
+    <div style >%s</div>
   </body>
 <section id = 'classes'>
 		<footer>
