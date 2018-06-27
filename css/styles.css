@@ -39,4 +39,15 @@ body {
     justify-content: flex-end;
 }
 
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: grey;
+}
+
+.navbar a:active {
+    color: #877171;
+}
 

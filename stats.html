@@ -7,56 +7,31 @@
 		<meta name = 'author' content = ''>
 		<title>Pi Site</title>
 		<link href = 'css/styles.css' rel = 'stylesheet' type = 'text/css'>
-		<link href = 'css/normalize.css' rel = 'stylesheet' type = 'text/css'>
 		<link href = 'css/w3.css' rel = 'stylesheet' type = 'text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		</head>
 	<body>
-		<header>
-			<div class = 'navbar'>
-				<nav>
-					<ul>
-						<li><a href = 'index.html'><img src = 'img/logo.png'></a></li>
-						<li><a href = 'stats.html'>Pi Stats</a></li>
-						<li><a href = 'links.html'>Links</a></li>
-						<li><a href = '#openModal'>Login</a></li>
-					</ul>
-				</nav>
-				<div id = 'openModal' class = 'modalDialog'>
-					<div><a href = "#close" title = 'Close' class = 'close'>X</a>
-						<!-- Content fod Modal -->
-						<div class = 'login'>
-							<h2>Sign in</h2>
-							<form>
-								<input type = 'email' name = 'email' placeholder = 'Email' >
-								<input type = 'password' name = 'password' placeholder = 'Password'>
-								<input type = 'button' value = 'Login'>
-							</form> 
-						</div> <!-- end login -->
-					</div> <!-- end close -->
-				</div> <!-- end modal -->
-			</div> <!-- End of Nav bar -->
-		</header>
+		<div class = 'navbar'>
+			<div class = 'left'>
+				<a href = 'index.html'><img src = 'img/logo.png'></a>
+				<a href = 'stats.html'>Stats</a>
+				<a href = '#'>Links</a>
+				<a href = '#'>Images</a>
+				<a href = '#'>Tests</a>
+			</div>
 
-  <body>
+			<div class = 'right'>
+				<a href = '#'>Login</a>
+			</div>
+		</div>
+
   	<h2>Current Uptime Statistic</h2>
     <div id = 'uptime'>hi</div>
   </body>
-<section id = 'classes'>
-		<footer>
-			<nav>
-				<ul>
-					<li><a href = 'index.html'>Home</a></li>
-					<li><a href = 'data.html'>Pi Stats</a></li>
-					<li><a href = 'links.html'>Links</a></li>
-				</ul>
-			</nav>
-		</footer>
-	</body>
 
 	<script type="text/javascript">
-		var element = document.getElementById('uptime').innerHTML;
-		element = '20:32:01 up 38 min,  2 users,  load average: 1.18, 0.97, 0.78';
+		var element = '20:32:01 up 38 min,  2 users,  load average: 1.18, 0.97, 0.78';
+		document.getElementById('uptime').innerHTML = element
 	</script>
 
 </html>
