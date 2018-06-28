@@ -49,6 +49,7 @@
     border-bottom: 10px solid green;
     width: 200px;
     height: 250px;
+    transition: width 1s, height 1s
 }
 
 .package .package-description {
@@ -69,6 +70,8 @@
     height: 320px;
     width: 320px;
     font-size: 1.1em;
+    overflow: hidden;
+    overflow-wrap: break-word; 
 }
 
 a {
@@ -92,5 +95,6 @@ a:active {
 
     .package {
         margin-top: 50px;
+        width: 66vw;
     }
 }
