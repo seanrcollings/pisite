@@ -56,7 +56,7 @@ body {
 .lightbox {
   display: none;
   text-align: center;
-  
+  z-index: 1;
 }
 
 /* Opened lightbox */
