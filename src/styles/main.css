@@ -1,0 +1,22 @@
+.navbar {
+  background-color: #333;
+  display: flex;
+  padding: .5em;
+  align-items: center; }
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 0em 1em; }
+    .navbar a:hover {
+      color: grey;
+      cursor: pointer; }
+    .navbar a:active {
+      color: #877171; }
+  .navbar img {
+    height: 40px;
+    width: 40px; }
+
+body {
+  font-family: Arial, san-serrif;
+  margin: 0px; }
