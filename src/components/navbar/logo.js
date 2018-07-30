@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-import logoBlack from '../img/logo.png';
-import logoColor from '../img/logo-color.png';
+import logoBlack from '../../img/logo.png';
+import logoColor from '../../img/logo-color.png';
+
+import history from '../../history'
 
 export default class Logo extends Component {
     constructor(props) {
@@ -11,6 +13,10 @@ export default class Logo extends Component {
         this.state = {
             logoImage: logoBlack
         }
+    }
+
+    handlePush() {
+        history.push(this.props.path)
     }
 
     toggleHover = () => {
@@ -23,7 +29,7 @@ export default class Logo extends Component {
 
     render() {
          return (
-            <a className = 'logo' onMouseEnter = {this.toggleHover} onMouseLeave = {this.toggleHover}>
+            <a onClick = {() => this.handlePush()} className = 'logo' onMouseEnter = {this.toggleHover} onMouseLeave = {this.toggleHover}>
                 <img src = {this.state.logoImage} /> 
             </a>
          )
