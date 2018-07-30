@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 
 import backgroundImg from '../img/blue.png'
+import NavBar from './navbar/navbar';
 
 export default class Home extends Component {
     render() {
          return (
             <div className = 'home'>
+            <NavBar />
                 <div className = 'home__title'>
                     <h1>Welcome to my Pi Site</h1>
-                    <img src = {backgroundImg}/>
+                    <img src = {backgroundImg} alt = 'backgroung'/>
                 </div>
 
                 <div className = 'home__content'>
@@ -25,7 +27,6 @@ export default class Home extends Component {
                         <div id = 'home__link-boxes'>
                             link boxes will go here   
                         </div>
-
                 </div> {/* CONTENT END */}
             </div> 
          )

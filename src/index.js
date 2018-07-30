@@ -13,11 +13,11 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render(
     <Router history = {history}>
         <Switch>
-            <NavBar> 
+            {/* <NavBar> */}
                 <Route path ='/' exact component={Home} />
                 <Route path ='/stats' />
                 <Route path ='/howto' />
-            </NavBar>
+            {/* </NavBar> */}
         </Switch>
     </Router>
 
