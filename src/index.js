@@ -4,7 +4,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 
 import './styles/main.css'
 
-import NavBar from './components/navbar/navbar';
+// import NavBar from './components/navbar/navbar';
 import Home from './components/home';
 import history from './history';
 

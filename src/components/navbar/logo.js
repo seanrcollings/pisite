@@ -30,7 +30,7 @@ export default class Logo extends Component {
     render() {
          return (
             <a onClick = {() => this.handlePush()} className = 'logo' onMouseEnter = {this.toggleHover} onMouseLeave = {this.toggleHover}>
-                <img src = {this.state.logoImage} /> 
+                <img src = {this.state.logoImage} alt = 'logo'/> 
             </a>
          )
     }

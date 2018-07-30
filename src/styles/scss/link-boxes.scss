@@ -1,0 +1,49 @@
+.package {
+    background-color: #e8e8e8;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; 
+    padding: 20px;
+    margin: 50px;
+    margin-top: 0px;
+    font-size: 1.2em;
+    border-bottom: 10px solid $green-75;
+    width: 200px;
+    height: 250px;
+    transition: width 1s, height 1s;
+    
+    &__description {
+        display: none;
+    }
+
+    &:hover {
+        border-bottom: 10px solid $red-BB;
+        cursor: pointer;
+    }
+}
+
+#link-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    a {
+        text-decoration: none;
+        
+        &:hover {
+            color: grey;
+        }
+
+        &:active {
+            color: #877171;
+        }
+    }
+}
+
+@media only screen and (max-width: 48em) {        
+    &__package {
+        margin-top: 50px;
+        width: 66vw;
+    }
+}

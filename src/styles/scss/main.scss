@@ -1,7 +1,10 @@
-@import 'navbar.scss';
-@import 'home.scss';
+@import 'variables';
+@import 'navbar';
+@import 'home';
+@import 'link-boxes';
+
 
 body {
-    font-family: Arial, san-serrif;
+    font-family: $raleway;
     margin: 0px;
 }
