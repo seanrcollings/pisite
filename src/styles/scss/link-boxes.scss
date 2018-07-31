@@ -1,4 +1,5 @@
 .package {
+    position: relative;
     background-color: #e8e8e8;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -10,10 +11,60 @@
     border-bottom: 10px solid $green-75;
     width: 200px;
     height: 250px;
-    transition: width 1s, height 1s;
+    transition: width 1.5s, height 1.5s;
+
+    display: flex;
+    flex-direction: column;
+
+    &__expand {
+        height: 500px;
+        width: 500px;
+    }
     
+    &__subtitle {
+        transition: all 1.5s ease;
+
+        &__expand {
+            font-size: .75em;
+            margin-top: -20px;
+            margin-bottom: 25px;
+            color: $red-BB;
+        }
+    }
+
     &__description {
         display: none;
+
+        &__expand {
+            display: block;
+            overflow: hidden;
+        }
+    }
+
+    &__link {
+        transition: all 1s ease;
+        font-size: 15px;
+        color: $red-BB;
+
+        position: absolute;
+        top: 250px;
+        left: 100px;
+        transform: translateX(50px);
+        opacity: 0;
+
+        &__expand {
+            top: 490px;
+            left: 350px;
+            opacity: 1;
+            transform: translateX(0px);
+            overflow: hidden;
+            font-size: 20px;
+        }
+
+        &-show {
+            opacity: 1;
+            transform: translateX(0px);
+        }
     }
 
     &:hover {
@@ -24,21 +75,9 @@
 
 #link-boxes {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    a {
-        text-decoration: none;
-        
-        &:hover {
-            color: grey;
-        }
-
-        &:active {
-            color: #877171;
-        }
-    }
 }
 
 @media only screen and (max-width: 48em) {        

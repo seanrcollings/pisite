@@ -6,9 +6,9 @@ import LinkBoxes from './linkBoxes';
 
 export default class Home extends Component {
     render() {
-         return (
+        return (
             <div className = 'home'>
-            <NavBar />
+                <NavBar />
                 <div className = 'home__title'>
                     <h1>Welcome to my Pi Site</h1>
                     <img src = {backgroundImg} alt = 'backgroung'/>
