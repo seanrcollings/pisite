@@ -3,8 +3,16 @@
 @import 'home';
 @import 'link-boxes';
 
+// STATS
+@import 'stats/stats';
+@import 'stats/stats-content';
+@import 'stats/stats-types';
+@import 'stats/stats-item';
+
+
 
 body {
     font-family: $raleway;
+    color: $gray-4D;
     margin: 0px;
 }
