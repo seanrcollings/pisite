@@ -1,17 +1,19 @@
 .link-box {
     background: $gray-F8;
     width: 475px;
-    height: 70px;
     border-left: 9px solid $green-75;
 
     display: grid;
     grid-template-rows: [s title-s] 50px [title-e sub-s] 20px [sub-e e];
-    grid-template-columns: [s title-s] 150px [title-e link-s] 1fr [link-e e];
-    align-items: center;
+    grid-template-columns: [s title-s] 100px [title-e icon-s] 10px[icon-e link-s] 1fr [link-e e];
+    align-items: center; 
 
     transition: all .3s ease;
-    margin: 30px;
+    margin: 20px;
     padding: 10px;
+    float: right;
+    margin-right: 250px;
+
 
     &:hover {
         border-left: 9px solid $red-BB;
@@ -31,6 +33,15 @@
         transition: all .3s ease;
     }
 
+    &__icon {
+        transition: all .3s ease;
+        width: auto;
+        height: auto;
+        grid-row: title-s/title-e;
+        grid-column: icon-s/icon-e;
+        text-align: right;
+    }
+
     &__subtitle {
         grid-row: sub-s/e;
         grid-column: s/e;
@@ -38,8 +49,11 @@
         align-self: top;
     }
 
-    &__description {
-        display: none;
+    &__description { // Y U NO GO (╯°□°）╯︵ ┻━┻
+        padding-top: 24px;
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        position: relative;
     }
 
     &__link {
@@ -58,4 +72,9 @@
             transform: translateX(0px);
         }
     }
+}
+
+
+.arrow-up {
+    transform: rotate(180deg)
 }

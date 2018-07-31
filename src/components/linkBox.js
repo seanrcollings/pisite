@@ -21,7 +21,7 @@ export default class LinkBox extends Component {
 
     toggleHeight() {
         if(this.state.height === 0) {
-            this.setState({height: '200px'})
+            this.setState({height: 'auto'})
         } else {
             this.setState({height: 0})
         }
@@ -29,21 +29,31 @@ export default class LinkBox extends Component {
 
     render() {
         return (
-            <div onClick = {() => this.toggleHeight()}className = 'link-box' onMouseEnter = {() => this.toggleLink()} onMouseLeave = {() => this.toggleLink()}>
+
+            <div className = 'link-box' onMouseEnter = {() => this.toggleLink()} onMouseLeave = {() => this.toggleLink()}>
+                
                 <h2 className = 'link-box__title'>
-                    {this.props.title} <i className="fas fa-caret-down"></i>
+                    {this.props.title} 
                 </h2>
+
+                <div onClick = {() => this.toggleHeight()} className = {`link-box__icon ${this.state.height === 'auto' ? 'arrow-up' : ''}`}>
+                    <i className="fas fa-caret-down"></i>
+                </div>
+
                 <p className = 'link-box__subtitle' >
                     {this.props.subTitle}
                 </p>
+
                 <AnimateHeight duration = {300} height = {this.state.height}>
                     <div className = 'link-box__description'>
-                        {this.props.text}
+                        <p>{this.props.text}</p>
                     </div>
                 </AnimateHeight>
+
                 <a className = {`link-box__link ${this.state.linkStateClass}`}>
                     Navigate To Page <i className="fas fa-caret-right"></i>
                 </a>
+
             </div>
         )
     }
