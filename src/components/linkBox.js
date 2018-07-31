@@ -19,9 +19,18 @@ export default class LinkBox extends Component {
     }  
 
     toggleSize() {
+        // const parent = document.getElementById(this.props.id).parentElement
         if(!this.state.expanded) {
+            // parent.childNodes.forEach(child => {
+            //     if(child.id !== this.props.id) {
+            //         child.style.display = 'inline';
+            //     }
+            // })
             this.setState({expanded: true})
         } else {
+            // parent.childNodes.forEach(child => {
+            //     child.style.display = 'block';
+            // })
             this.setState({expanded: false})
         }
     }
@@ -29,10 +38,18 @@ export default class LinkBox extends Component {
     render() {
         return (
             <div className = {`package ${this.state.expanded ? 'package__expand' : ''}`} id = {this.props.id} onMouseEnter = {() => this.toggleLink()} onMouseLeave = {() => this.toggleLink()} onClick = {() => this.toggleSize()}>
-                <h2>{this.props.title}</h2>
-                <p className = {`subtitle ${this.state.linkStateClass} ${this.state.expanded ? 'package__subtitle__expand' : ''}`} >{this.props.subTitle}</p>
-                <div className = {`package__description ${this.state.expanded ? 'package__description__expand' : ''}`}>{this.props.text}</div>
-                <a className = {`package__link ${this.state.linkStateClass} ${this.state.expanded ? 'package__link__expand' : ''}`}>Navigate To Page <i className="fas fa-caret-right"></i></a>
+                <h2>
+                    {this.props.title}
+                </h2>
+                <p className = {`subtitle ${this.state.linkStateClass} ${this.state.expanded ? 'package__subtitle__expand' : ''}`} >
+                    {this.props.subTitle}
+                </p>
+                <div className = {`package__description ${this.state.expanded ? 'package__description__expand' : ''}`}>
+                    {this.props.text}
+                </div>
+                <a className = {`package__link ${this.state.linkStateClass} ${this.state.expanded ? 'package__link__expand' : ''}`}>
+                    Navigate To Page <i className="fas fa-caret-right"></i>
+                </a>
             </div>
         )
     }
