@@ -2,9 +2,11 @@
 @import 'navbar';
 @import 'home';
 @import 'link-boxes';
+@import 'howto-grid';
 
 
 body {
     font-family: $raleway;
+    color: $gray-4D;
     margin: 0px;
 }

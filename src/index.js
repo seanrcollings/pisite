@@ -6,6 +6,7 @@ import './styles/main.css'
 
 // import NavBar from './components/navbar/navbar';
 import Home from './components/home';
+import HowTo from './components/howto/howto';
 import history from './history';
 
 import registerServiceWorker from './registerServiceWorker';
@@ -16,7 +17,7 @@ ReactDOM.render(
             {/* <NavBar> */}
                 <Route path ='/' exact component={Home} />
                 <Route path ='/stats' />
-                <Route path ='/howto' />
+                <Route path ='/howto' component={HowTo}/>
             {/* </NavBar> */}
         </Switch>
     </Router>
