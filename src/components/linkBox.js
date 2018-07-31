@@ -1,53 +1,47 @@
 import React, { Component } from 'react';
+import AnimateHeight from 'react-animate-height';
 
 export default class LinkBox extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            expanded: false,
+            height: 0,
             linkStateClass: ''
         }
     }
 
     toggleLink() {
         if(this.state.linkStateClass === '') {
-            this.setState({linkStateClass: 'package__link-show'})
+            this.setState({linkStateClass: 'link-box__link-show'})
         } else {
             this.setState({linkStateClass: ''})
         }
     }  
 
-    toggleSize() {
-        // const parent = document.getElementById(this.props.id).parentElement
-        if(!this.state.expanded) {
-            // parent.childNodes.forEach(child => {
-            //     if(child.id !== this.props.id) {
-            //         child.style.display = 'inline';
-            //     }
-            // })
-            this.setState({expanded: true})
+    toggleHeight() {
+        if(this.state.height === 0) {
+            this.setState({height: '200px'})
         } else {
-            // parent.childNodes.forEach(child => {
-            //     child.style.display = 'block';
-            // })
-            this.setState({expanded: false})
+            this.setState({height: 0})
         }
     }
 
     render() {
         return (
-            <div className = {`package ${this.state.expanded ? 'package__expand' : ''}`} id = {this.props.id} onMouseEnter = {() => this.toggleLink()} onMouseLeave = {() => this.toggleLink()} onClick = {() => this.toggleSize()}>
-                <h2>
-                    {this.props.title}
+            <div onClick = {() => this.toggleHeight()}className = 'link-box' onMouseEnter = {() => this.toggleLink()} onMouseLeave = {() => this.toggleLink()}>
+                <h2 className = 'link-box__title'>
+                    {this.props.title} <i className="fas fa-caret-down"></i>
                 </h2>
-                <p className = {`subtitle ${this.state.linkStateClass} ${this.state.expanded ? 'package__subtitle__expand' : ''}`} >
+                <p className = 'link-box__subtitle' >
                     {this.props.subTitle}
                 </p>
-                <div className = {`package__description ${this.state.expanded ? 'package__description__expand' : ''}`}>
-                    {this.props.text}
-                </div>
-                <a className = {`package__link ${this.state.linkStateClass} ${this.state.expanded ? 'package__link__expand' : ''}`}>
+                <AnimateHeight duration = {300} height = {this.state.height}>
+                    <div className = 'link-box__description'>
+                        {this.props.text}
+                    </div>
+                </AnimateHeight>
+                <a className = {`link-box__link ${this.state.linkStateClass}`}>
                     Navigate To Page <i className="fas fa-caret-right"></i>
                 </a>
             </div>

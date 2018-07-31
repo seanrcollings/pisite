@@ -1,88 +1,61 @@
-.package {
-    position: relative;
-    background-color: #e8e8e8;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px; 
-    padding: 20px;
-    margin: 50px;
-    margin-top: 0px;
-    font-size: 1.2em;
-    border-bottom: 10px solid $green-75;
-    width: 200px;
-    height: 250px;
-    transition: width 1.5s, height 1.5s;
+.link-box {
+    background: $gray-F8;
+    width: 475px;
+    height: 70px;
+    border-left: 9px solid $green-75;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: [s title-s] 50px [title-e sub-s] 20px [sub-e e];
+    grid-template-columns: [s title-s] 150px [title-e link-s] 1fr [link-e e];
+    align-items: center;
 
-    &__expand {
-        height: 500px;
-        width: 500px;
-    }
-    
-    &__subtitle {
-        transition: all 1.5s ease;
+    transition: all .3s ease;
+    margin: 30px;
+    padding: 10px;
 
-        &__expand {
-            font-size: .75em;
-            margin-top: -20px;
-            margin-bottom: 25px;
-            color: $red-BB;
+    &:hover {
+        border-left: 9px solid $red-BB;
+        box-shadow: 0px 0px 10px $gray-D8;
+
+        .link-box__title {
+            font-size: 24px;
+            transform: translateY(-2px) 
         }
+    }
+
+    &__title {
+        grid-column: title-s/title-e;
+        grid-row: title-s/title-e;
+
+        font-size: 22px;
+        transition: all .3s ease;
+    }
+
+    &__subtitle {
+        grid-row: sub-s/e;
+        grid-column: s/e;
+        font-size: 12px;
+        align-self: top;
     }
 
     &__description {
         display: none;
-
-        &__expand {
-            display: block;
-            overflow: hidden;
-        }
     }
 
     &__link {
-        transition: all 1.5s ease;
+        transition: all 1s ease;
         font-size: 15px;
         color: $red-BB;
-
-        position: absolute;
-        top: 250px;
-        left: 100px;
-        transform: translateX(50px);
         opacity: 0;
+        transform: translateX(50px);
 
-        &__expand {
-            top: 490px;
-            left: 350px;
-            opacity: 1;
-            transform: translateX(0px);
-            overflow: hidden;
-            font-size: 20px;
-        }
+        grid-row: s/e;
+        grid-column: link-s/link-e;
+        text-align: right;
 
         &-show {
             opacity: 1;
             transform: translateX(0px);
         }
-    }
-
-    &:hover {
-        border-bottom: 10px solid $red-BB;
-        cursor: pointer;
-    }
-}
-
-#link-boxes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@media only screen and (max-width: 48em) {        
-    &__package {
-        margin-top: 50px;
-        width: 66vw;
     }
 }
