@@ -1,19 +1,18 @@
 .link-box {
+    display: grid;
+    grid-template-rows: [s title-s] 50px [title-e sub-s] 20px [sub-e text-s] 1fr [text-e e];
+    grid-template-columns: [s title-s] 100px [title-e icon-s] 10px [icon-e link-s] 1fr [link-e e];
+    align-items: center; 
+    
     background: $gray-F8;
     width: 475px;
     border-left: 9px solid $green-75;
-
-    display: grid;
-    grid-template-rows: [s title-s] 50px [title-e sub-s] 20px [sub-e e];
-    grid-template-columns: [s title-s] 100px [title-e icon-s] 10px[icon-e link-s] 1fr [link-e e];
-    align-items: center; 
 
     transition: all .3s ease;
     margin: 20px;
     padding: 10px;
     float: right;
     margin-right: 250px;
-
 
     &:hover {
         border-left: 9px solid $red-BB;
@@ -43,7 +42,7 @@
     }
 
     &__subtitle {
-        grid-row: sub-s/e;
+        grid-row: sub-s/sub-e;
         grid-column: s/e;
         font-size: 12px;
         align-self: top;
@@ -51,9 +50,9 @@
 
     &__description { // Y U NO GO (╯°□°）╯︵ ┻━┻
         padding-top: 24px;
-        grid-row: 2/3;
-        grid-column: 1/-1;
-        position: relative;
+        grid-row: text-s/text-e;
+        grid-column: link-s/link-e;
+        width: 400px;
     }
 
     &__link {
@@ -66,6 +65,7 @@
         grid-row: s/e;
         grid-column: link-s/link-e;
         text-align: right;
+        align-self: end;
 
         &-show {
             opacity: 1;
@@ -78,3 +78,5 @@
 .arrow-up {
     transform: rotate(180deg)
 }
+
+
