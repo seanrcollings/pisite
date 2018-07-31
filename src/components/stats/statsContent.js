@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
 import StatsTypes from './statsTypes';
-import StatsDescription from './statsDescription';
+import StatsDetails from './statsDetails';
 
 class StatsContent extends Component {
     render() {
         return (
             <div className='stats-content'>
                 <StatsTypes/>
-                <StatsDescription/>
+                <StatsDetails/>
             </div>
         );
     }

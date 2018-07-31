@@ -1,7 +1,7 @@
-.stats-content-types {
-    display: grid;
-    grid-row-gap: 20px;
-    
+.stats-types {
+    grid-row: 1;
+    grid-column: types-s/types-e;
+
     &__title {
         font-weight: bold;
         font-size: 36px;
