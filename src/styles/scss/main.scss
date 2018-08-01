@@ -2,6 +2,7 @@
 @import 'navbar';
 @import 'home';
 @import 'link-boxes';
+@import 'howto-grid';
 
 // STATS
 @import 'stats/stats';
@@ -13,7 +14,7 @@
 
 
 body {
-    font-family: $raleway;
+    font-family: $mont;
     color: $gray-4D;
     margin: 0px;
 }
