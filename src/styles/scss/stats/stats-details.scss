@@ -1,11 +1,15 @@
 .stat-details {
-    grid-row: 1;
+    grid-row: content-s/content-e;
     grid-column: description-s/description-e;
 
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: [title-s] 50px [title-e data-s] 100px [data-e description-s] 1fr [description-e];
+    grid-template-columns: 500px;
+    grid-template-rows: 50px [title-s] 50px [title-e data-s] 100px [data-e description-s] 1fr [description-e];
     grid-row-gap: 25px;
+
+    background-color: $gray-F8;
+    box-shadow: 2px 2px 2px 2px $gray-D8;
+    height: 500px;
    
     &__title {
         font-size: 36px;
