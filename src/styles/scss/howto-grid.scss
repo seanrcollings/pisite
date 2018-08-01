@@ -10,13 +10,13 @@
         height: 100%;
         grid-column: content-s/content-e;
         grid-row: 1;
-
+        padding: 20px;
     }
     
     &__sidebar {  
         position: fixed;
-        top: 300px;
-        left: 1400px;
+        top: 250px;
+        left: 90em;
 
         font-size: 18px;
         font-family: $encode;
@@ -32,6 +32,7 @@
                 transition: all .4s ease;
                 padding: 7px;
                 border-right: 3px solid $red-BB;
+                padding: 10px;
                 
                 a {
                     text-decoration: none;

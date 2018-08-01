@@ -4,9 +4,9 @@
     grid-template-columns: [s title-s] 100px [title-e icon-s] 10px [icon-e link-s] 1fr [link-e e];
     align-items: center; 
     
-    background: $gray-F8;
+    background-color: $gray-F8;
     width: 475px;
-    border-left: 9px solid $green-75;
+    border-left: 9px solid $green-75 ;
 
     transition: all .3s ease;
     margin: 20px;
@@ -29,6 +29,7 @@
         grid-row: title-s/title-e;
 
         font-size: 22px;
+        font-family: 'Montserrat';
         transition: all .3s ease;
     }
 
@@ -39,6 +40,7 @@
         grid-row: title-s/title-e;
         grid-column: icon-s/icon-e;
         text-align: right;
+        font-size: 22px;
     }
 
     &__subtitle {
@@ -48,7 +50,7 @@
         align-self: top;
     }
 
-    &__description { // Y U NO GO (╯°□°）╯︵ ┻━┻
+    &__description {
         padding-top: 24px;
         grid-row: text-s/text-e;
         grid-column: link-s/link-e;
@@ -66,6 +68,10 @@
         grid-column: link-s/link-e;
         text-align: right;
         align-self: end;
+
+        &:hover {
+            cursor: pointer;
+        }
 
         &-show {
             opacity: 1;

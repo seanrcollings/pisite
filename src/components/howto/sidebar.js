@@ -22,6 +22,34 @@ export default class Sidebar extends Component {
                 title: 'Sidebar 4',
                 link: '#'  
             },
+            {
+                title: 'Sidebar 4',
+                link: '#'  
+            },
+            {
+                title: 'Sidebar 4',
+                link: '#'  
+            },
+            {
+                title: 'Sidebar 4',
+                link: '#'  
+            },
+            {
+                title: 'Sidebar 4',
+                link: '#'  
+            },
+            {
+                title: 'Sidebar 4',
+                link: '#'  
+            },
+            {
+                title: 'Sidebar 4',
+                link: '#'  
+            },
+            {
+                title: 'Sidebar 4',
+                link: '#'  
+            },
         ]
          return (
             <div className = 'howto-grid__sidebar'>

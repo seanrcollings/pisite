@@ -9,19 +9,21 @@ export default class LinkBoxes extends Component {
 			{
 				title: 'Stats',
 				subTitle: 'Check Stats from the pi',
-				text: "Information on what is on the the Pi or what it is doing are displayed here, additionally any data gathered by sensors attached to the Pi's GPIO pins will also be displayed here."
+				text: "Information on what is on the the Pi or what it is doing are displayed here, additionally any data gathered by sensors attached to the Pi's GPIO pins will also be displayed here.",
+				path: '/stats'
 			},
 			{
 				title: 'How To',
 				subTitle: 'Instructions on how to set up a Pi web server',
-				text: "A simple and quick instruction set on how to get a web server up and running on a Raspberry Pi 3 model A. (Mostly for my own documentation)"
+				text: "A simple and quick instruction set on how to get a web server up and running on a Raspberry Pi 3 model A. (Mostly for my own documentation)",
+				path: '/howto'
 			}
 		]
 		return (
 			<div id = 'link-boxes'>
 				{
 					boxes.map((data, index) => {
-						return <LinkBox key = {index} title = {data.title} subTitle = {data.subTitle} text = {data.text} id = {index}/>
+						return <LinkBox key = {index} {...data} id = {index}/>
 					})
 				}  
 			</div>
