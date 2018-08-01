@@ -4,9 +4,17 @@
 @import 'link-boxes';
 @import 'howto-grid';
 
+// STATS
+@import 'stats/stats';
+@import 'stats/stats-content';
+@import 'stats/stats-types';
+@import 'stats/stats-item';
+@import 'stats/stats-details';
+
+
 
 body {
-    font-family: 'Montserrat';
+    font-family: $mont;
     color: $gray-4D;
     margin: 0px;
 }

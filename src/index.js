@@ -6,7 +6,9 @@ import './styles/main.css'
 
 // import NavBar from './components/navbar/navbar';
 import Home from './components/home';
+import Stats from './components/stats/stats';
 import HowTo from './components/howto/howto';
+
 import history from './history';
 
 import registerServiceWorker from './registerServiceWorker';
@@ -16,8 +18,8 @@ ReactDOM.render(
         <Switch>
             {/* <NavBar> */}
                 <Route path ='/' exact component={Home} />
-                <Route path ='/stats' />
-                <Route path ='/howto' component={HowTo}/>
+                <Route path ='/stats' component={Stats} />
+                <Route path ='/howto' component={HowTo} />
             {/* </NavBar> */}
         </Switch>
     </Router>

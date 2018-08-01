@@ -1,0 +1,32 @@
+.stats-content {
+    grid-row: content-s/content-e;
+    grid-column: content-s/content-e;
+
+    display: grid;
+    grid-template-columns: [types-s] 1fr [types-e description-s] 1fr [description-e];
+    grid-template-rows: 50px [content-s] 1fr [content-e];
+    justify-items: center;
+}
+
+.clip-path,
+.clip-path__border {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+    background: $gray-33;
+
+    z-index: -9;
+    -webkit-clip-path: polygon(100% 45%, 100% 100%, 45% 100%);
+    clip-path: polygon(100% 45%, 100% 100%, 45% 100%);
+
+    &__border {
+        background: $green-75;
+        -webkit-clip-path: polygon(100% 44%, 100% 100%, 44% 100%);
+        clip-path: polygon(100% 44%, 100% 100%, 44% 100%);
+
+
+        z-index: -10;
+    }
+
+}
