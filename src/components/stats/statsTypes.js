@@ -8,10 +8,10 @@ class StatsTypes extends Component {
             <div className='stats-types'>
                 <div className='stats-types__title'>Stat Types</div>
                 <div className='stats-types__items'>
-                    <StatsItem />
-                    <StatsItem />
-                    <StatsItem />
-                    <StatsItem />
+                    <StatsItem title='Current Time' callback={(event) => this.props.callback(event)}/>
+                    {/* <StatsItem title='Uptime'/>
+                    <StatsItem title='Users'/>
+                    <StatsItem title='Average Load'/> */}
                 </div>
             </div>
         );
