@@ -3,6 +3,7 @@ import React from 'react';
 export default function HowToContent() {
     return [
         <div className = 'howto-grid__content'>
+            <h2 id = 'heading1'>I'm a cool heading:)</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan tortor quis pharetra malesuada. Phasellus hendrerit aliquet tincidunt.
                 Integer non dignissim nunc. Suspendisse in massa dignissim, laoreet risus non, porta mi. Donec posuere at sapien non luctus. Nulla nulla urna, lobortis a tristique at,
