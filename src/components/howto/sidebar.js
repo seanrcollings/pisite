@@ -55,8 +55,8 @@ export default class Sidebar extends Component {
             <div className = 'howto-grid__sidebar'>
                 <ul>
                     {
-                        sidebarItems.map((item, id) => {
-                            return <SideBarItem key = {id} title = {item.title} link = {item.link}/>
+                        sidebarItems.map((item, index) => {
+                            return <SideBarItem key = {index} title = {item.title} link = {item.link}/>
                         })
                     }
                 </ul>

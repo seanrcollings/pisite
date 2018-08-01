@@ -53,8 +53,8 @@ export default class LinkBox extends Component {
                         Navigate To Page <i className="fas fa-caret-right"></i>
                     </a>
                 
-                <AnimateHeight duration = {300} height = {this.state.height}>
-                    <div className = 'link-box__description'>
+                <AnimateHeight duration = {300} height = {this.state.height} className = 'link-box__description'>
+                    <div>
                         <p>{this.props.text}</p>
                     </div>
                 </AnimateHeight>
