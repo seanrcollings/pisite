@@ -54,7 +54,8 @@ export default class Home extends Component {
                     </div>
 
                         <div id = 'home__link-boxes'>
-                            <LinkBoxes />   
+                            <LinkBoxes /> 
+                            <LinkBoxes />  
                         </div>
                 </div> {/* CONTENT END */}
             </div> 

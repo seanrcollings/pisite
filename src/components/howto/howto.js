@@ -11,6 +11,8 @@ export default class HowTo extends Component {
             <div className = 'howto-grid'>
                 <HowToContent />
                 <Sidebar />
+                <div className = 'clip-path-howto'></div>
+                <div className = 'clip-path-howto__border'></div>
             </div>
          ]
     }

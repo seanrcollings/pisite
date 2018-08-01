@@ -1,7 +1,10 @@
 @import 'variables';
-@import 'navbar';
+
+// HOMEPAGE
 @import 'home';
 @import 'link-boxes';
+
+// HOWTO
 @import 'howto-grid';
 
 // STATS
@@ -11,6 +14,9 @@
 @import 'stats/stats-item';
 @import 'stats/stats-details';
 
+// HELPERS
+@import 'clip-paths';
+@import 'navbar';
 
 
 body {

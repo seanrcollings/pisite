@@ -29,7 +29,7 @@
         grid-row: title-s/title-e;
 
         font-size: 22px;
-        font-family: 'Montserrat';
+        font-family: $mont;
         transition: all .3s ease;
     }
 
@@ -40,7 +40,7 @@
         grid-row: title-s/title-e;
         grid-column: icon-s/icon-e;
         text-align: right;
-        font-size: 22px;
+        font-size: 25px;
     }
 
     &__subtitle {

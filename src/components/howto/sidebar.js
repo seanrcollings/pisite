@@ -8,7 +8,7 @@ export default class Sidebar extends Component {
         const sidebarItems = [
             {
               title: 'Sidebar 1',
-              link: '#'  
+              link: '#heading1'  
             },
             {
                 title: 'Sidebar 2',
