@@ -12,7 +12,7 @@ class DataType():
 
 	def fetch_data(self):
 		command_output = subprocess.check_output(self.command, shell = True).strip().decode('utf-8')
-		data_objects.append(get_object(command_output))
+		data_objects.append(self.get_object(command_output))
 
 	def get_object(self, data):
 	    return {
@@ -22,17 +22,17 @@ class DataType():
 	        "id": self.id
 	    }
 
-	def get_id(title):
+	def get_id(self, title):
 	    return hashlib.sha1(title.encode()).hexdigest()
 
 
 data_types = [
-	DataType('Uptime', 'Time since last restart', 'uptime-p')
+	DataType('Uptime', 'Time since last restart', 'uptime -p'),
 	DataType('Current time', "You are a dummy if you do not know what current time it", "date +\%I:\%M\%p")
 ]
 
 for data_type in data_types:
-	data_type.fetch_data
-    
+	data_type.fetch_data()
+
 with open('data.json', 'w') as outfile:
-    json.dump(data_object, outfile)
+    json.dump(data_objects, outfile)
