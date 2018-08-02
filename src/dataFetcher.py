@@ -1,4 +1,9 @@
-import json; import hashlib
+import json; import hashlib; import subprocess
+
+def get_uptime_data(): 
+    # runs the uptime command in the terminal, is parsed apart into 4 seperate stats for the website: Uptime, Current Time, Users, Average Load
+    uptime_output = subprocess.check_output('uptime', shell = True).strip().decode('utf-8')
+    print(uptime_output)
 
 raw_data = [["Current Time", "20:32:01", "You're dumb if you don't know what current time means"], ["Users", "2 Useres", "Stat won't change"], ["Uptime", "34 Minutes", "How long since last restart"]]
 data = []
