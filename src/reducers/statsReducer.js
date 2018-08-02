@@ -22,7 +22,7 @@ export default function(state = INITIAL_STATE, action) {
         case SWAP_DESCRIPTION:
             const focusedId = action.payload;
             let focused = null;
-            state.stats.map(stat => {
+            state.stats.forEach(stat => {
                 if(stat.id === focusedId) {
                     focused = stat;
                 }
