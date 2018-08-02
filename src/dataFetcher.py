@@ -5,6 +5,7 @@ data = []
 def get_uptime_data(): 
     # runs the uptime command in the terminal, is parsed apart into 4 seperate stats for the website: Uptime, Current Time, Users, Average Load
     uptime_output = subprocess.check_output('uptime -p', shell = True).strip().decode('utf-8')
+    raw_data.append(["Uptime", uptime_output, "Uptimey boy"] )
 
 def get_date_data(): 
     date_output = subprocess.check_output("date +%I:%M%p", shell = True).strip().decode('utf-8')

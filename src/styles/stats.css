@@ -1,4 +1,0 @@
-.stats-grid {
-  display: grid;
-  grid-template-columns: 1fr [content-s] 1100px [content-e] 1fr;
-  grid-template-rows: minmax(50px, 1fr) [content-s] 700px [content-e] minmax(50px, 1fr); }
