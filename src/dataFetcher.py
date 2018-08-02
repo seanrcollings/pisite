@@ -1,36 +1,38 @@
 import json; import hashlib; import subprocess
-raw_data = []
-data = []
 
-def get_uptime_data(): 
-    # runs the uptime command in the terminal, is parsed apart into 4 seperate stats for the website: Uptime, Current Time, Users, Average Load
-    uptime_output = subprocess.check_output('uptime -p', shell = True).strip().decode('utf-8')
-    raw_data.append(["Uptime", uptime_output, "Uptimey boy"] )
+data_objects = []
 
-def get_date_data(): 
-    date_output = subprocess.check_output("date +%I:%M%p", shell = True).strip().decode('utf-8')
-    raw_data.append(["Current Time", date_output, "You're dumb if you don't know what current time means"] )
+class DataType():
+	def __init__(self, title, description, command):
+		self.title = title
+		self.description = description
+		self.command = command
 
+		self.id = self.get_id(self.title)
 
-def get_object(title, data, description):
-    return {
-        "title": str(title),
-        "data": str(data),
-        "description": str(description),
-        "id": get_id(title)
-    }
+	def fetch_data(self):
+		command_output = subprocess.check_output(self.command, shell = True).strip().decode('utf-8')
+		data_objects.append(get_object(command_output))
 
-def get_id(title):
-    return hashlib.sha1(title.encode()).hexdigest()
+	def get_object(self, data):
+	    return {
+	        "title": str(self.title),
+	        "data": str(data),
+	        "description": str(self.description),
+	        "id": self.id
+	    }
 
-
-get_date_data()
-get_uptime_data()
-
-for array in raw_data:
-	data.append(get_object(array[0], array[1], array[2]))
+	def get_id(title):
+	    return hashlib.sha1(title.encode()).hexdigest()
 
 
+data_types = [
+	DataType('Uptime', 'Time since last restart', 'uptime-p')
+	DataType('Current time', "You are a dummy if you do not know what current time it", "date +\%I:\%M\%p")
+]
+
+for data_type in data_types:
+	data_type.fetch_data
     
 with open('data.json', 'w') as outfile:
-    json.dump(data, outfile)
+    json.dump(data_object, outfile)
