@@ -22,14 +22,16 @@ const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.de
 
 
 ReactDOM.render(
-    <Router history = {history}>
-        <Switch>
-            {/* <NavBar> */}
-                <Route path ='/' exact component={Home} />
-                <Route path ='/stats' component={Stats} />
-                <Route path ='/howto' component={HowTo} />
-            {/* </NavBar> */}
-        </Switch>
-    </Router>
+    <Provider store={createStoreWithMiddleware(reducers)}>
+        <Router history = {history}>
+            <Switch>
+                {/* <NavBar> */}
+                    <Route path ='/' exact component={Home} />
+                    <Route path ='/stats' component={Stats} />
+                    <Route path ='/howto' component={HowTo} />
+                {/* </NavBar> */}
+            </Switch>
+        </Router>
+    </Provider>
     , document.getElementById('root'));
 registerServiceWorker();
