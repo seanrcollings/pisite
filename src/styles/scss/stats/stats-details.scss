@@ -4,7 +4,7 @@
 
     display: grid;
     grid-template-columns: 500px;
-    grid-template-rows: 25px [title-s] 50px [title-e data-s] 100px [data-e description-s] 1fr [description-e];
+    grid-template-rows: 25px [title-s] 50px [title-e data-s] minmax(100px, 200px) [data-e description-s] 1fr [description-e];
     grid-row-gap: 25px;
     justify-items: center;
 

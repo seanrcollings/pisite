@@ -3,9 +3,9 @@ import { FETCH_STATS, SWAP_DESCRIPTION } from '../actions/types';
 const INITIAL_STATE = {
     stats: [],
     focused: {
-        title: 'Current Time',
-        data: '20:32:01',
-        description: "You're dumb if you don't know what current time means",
+        title: 'Select a Data Type',
+        data: 'None Selected',
+        description: "",
         id: 0
     }
 }
@@ -22,7 +22,7 @@ export default function(state = INITIAL_STATE, action) {
         case SWAP_DESCRIPTION:
             const focusedId = action.payload;
             let focused = null;
-            state.stats.map(stat => {
+            state.stats.forEach(stat => {
                 if(stat.id === focusedId) {
                     focused = stat;
                 }

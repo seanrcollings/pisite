@@ -4,10 +4,6 @@ import * as actions from '../../actions';
 
 class StatsItem extends Component {
     
-    constructor(props) {
-        super(props)
-    }
-
     handleDetailSwap() {
         this.props.swapDescription(this.props.id)    
     }
