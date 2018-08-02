@@ -1,3 +1,9 @@
-import { fetchStats } from './stats'
+import { 
+    fetchStats,
+    swapDescription 
+} from './stats'
 
-export { fetchStats }
+export { 
+    fetchStats, 
+    swapDescription 
+}

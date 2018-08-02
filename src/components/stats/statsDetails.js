@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import * as actions from '../../actions'
 
 class StatsDetails extends Component {
     render() {
+        const { title, data, description } = this.props.focused
         return (
             <div className='stat-details'>
-                <div className='stat-details__title'>{this.props.title}</div>
-                <div className='stat-details__data'>{this.props.data}</div>
-                <div className='stat-details__description'>{this.props.description}</div>
+                <div className='stat-details__title'>{title}</div>
+                <div className='stat-details__data'>{data}</div>
+                <div className='stat-details__description'>{description}</div>
             </div>
         );
     }
 }
 
-export default StatsDetails;
+function mapStateToProps(state) {
+    const focused = state.stats.focused;
+    return {
+        focused
+    }
+
+}
+
+export default connect(mapStateToProps, actions)(StatsDetails);

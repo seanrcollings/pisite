@@ -1,29 +1,40 @@
-import{ FETCH_STATS } from './types'
+import{ FETCH_STATS, SWAP_DESCRIPTION } from './types'
 
-export function fetchStats(title) {
-    const stats = [
-        {
-            title: 'Current Time',
-            data: '20:32:01',
-            description: "You're dumb if you don't know what current time means"
-        },
-        {
-            title: 'Users',
-            data: '2 Users',
-            description: "You're dumb if you don't know what current time means"
-        },
-        {
-            title: 'Uptime',
-            data: '20:32:01',
-            description: "You're dumb if you don't know what current time means"
-        },
-    ]
+const stats = [
+    {
+        title: 'Current Time',
+        data: '20:32:01',
+        description: "You're dumb if you don't know what current time means",
+        id: 0
+    },
+    {
+        title: 'Users',
+        data: '2 Users',
+        description: "Stat probably won't ever change",
+        id: 1
+    },
+    {
+        title: 'Uptime',
+        data: '34 Minutes',
+        description: "How long since last restart",
+        id: 2
+    },
+]
+
+export function fetchStats() {
 
     return {
         type: FETCH_STATS,
         payload: stats.map(stat => {
                 return stat
         })
+    }
+}
+
+export function swapDescription(id) {
+    return {
+        type: SWAP_DESCRIPTION,
+        payload: id
     }
 }
 
