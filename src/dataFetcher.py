@@ -34,5 +34,5 @@ data_types = [
 for data_type in data_types:
 	data_type.fetch_data()
 
-with open('data.json', 'w') as outfile:
+with open('/var/www/html/src/data.json', 'w') as outfile:
     json.dump(data_objects, outfile)
