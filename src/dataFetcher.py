@@ -4,11 +4,10 @@ data = []
 
 def get_uptime_data(): 
     # runs the uptime command in the terminal, is parsed apart into 4 seperate stats for the website: Uptime, Current Time, Users, Average Load
-    uptime_output = subprocess.check_output('uptime', shell = True).strip().decode('utf-8')
-    print(uptime_output)
+    uptime_output = subprocess.check_output('uptime -p', shell = True).strip().decode('utf-8')
 
 def get_date_data(): 
-    date_output = subprocess.check_output("date +\%r", shell = True).strip().decode('utf-8')
+    date_output = subprocess.check_output("date +%I:%M%p", shell = True).strip().decode('utf-8')
     raw_data.append(["Current Time", date_output, "You're dumb if you don't know what current time means"] )
 
 
@@ -25,6 +24,8 @@ def get_id(title):
 
 
 get_date_data()
+get_uptime_data()
+
 for array in raw_data:
 	data.append(get_object(array[0], array[1], array[2]))
 
