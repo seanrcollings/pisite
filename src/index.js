@@ -7,6 +7,7 @@ import './styles/main.css'
 // import NavBar from './components/navbar/navbar';
 import Home from './components/home';
 import Stats from './components/stats/stats';
+import HowTo from './components/howto/howto';
 
 import history from './history';
 
@@ -21,17 +22,14 @@ const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.de
 
 
 ReactDOM.render(
-    <Provider store={createStoreWithMiddleware(reducers)}>
-        <Router history = {history}>
-            <Switch>
-                {/* <NavBar> */}
-                    <Route path ='/' exact component={Home} />
-                    <Route path ='/stats' component={Stats}/>
-                    <Route path ='/howto' />
-                {/* </NavBar> */}
-            </Switch>
-        </Router>
-    </Provider>
-
+    <Router history = {history}>
+        <Switch>
+            {/* <NavBar> */}
+                <Route path ='/' exact component={Home} />
+                <Route path ='/stats' component={Stats} />
+                <Route path ='/howto' component={HowTo} />
+            {/* </NavBar> */}
+        </Switch>
+    </Router>
     , document.getElementById('root'));
 registerServiceWorker();

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import backgroundImg from '../img/blue.png'
+import backgroundImg from '../img/blue-mobo.png'
 import NavBar from './navbar/navbar';
 import LinkBoxes from './linkBoxes';
 
@@ -10,7 +10,7 @@ export default class Home extends Component {
             <div className = 'home'>
                 <NavBar />
                 <div className = 'home__title'>
-                    <h1>Welcome to my Pi Site</h1>
+                    <h1>Welcome to OUR Pi Site ☭</h1>
                     <img src = {backgroundImg} alt = 'backgroung'/>
                 </div>
 
@@ -54,7 +54,8 @@ export default class Home extends Component {
                     </div>
 
                         <div id = 'home__link-boxes'>
-                            <LinkBoxes />   
+                            <LinkBoxes /> 
+                            <LinkBoxes />  
                         </div>
                 </div> {/* CONTENT END */}
             </div> 

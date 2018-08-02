@@ -1,7 +1,11 @@
 @import 'variables';
-@import 'navbar';
+
+// HOMEPAGE
 @import 'home';
 @import 'link-boxes';
+
+// HOWTO
+@import 'howto-grid';
 
 // STATS
 @import 'stats/stats';
@@ -10,10 +14,13 @@
 @import 'stats/stats-item';
 @import 'stats/stats-details';
 
+// HELPERS
+@import 'clip-paths';
+@import 'navbar';
 
 
 body {
-    font-family: $raleway;
+    font-family: $mont;
     color: $gray-4D;
     margin: 0px;
 }
