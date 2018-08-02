@@ -13,6 +13,14 @@ import history from './history';
 
 import registerServiceWorker from './registerServiceWorker';
 
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import reduxThunk from 'redux-thunk';
+import reducers from './reducers';
+
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
+
+
 ReactDOM.render(
     <Router history = {history}>
         <Switch>
@@ -23,6 +31,5 @@ ReactDOM.render(
             {/* </NavBar> */}
         </Switch>
     </Router>
-
     , document.getElementById('root'));
 registerServiceWorker();
