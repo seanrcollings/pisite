@@ -1,0 +1,51 @@
+.howto-grid {
+    display: grid;
+    grid-template-columns: [s empty-s] 1fr [emtpy-e content-s] 900px [content-e sidebar-s] 1fr [sidebar-e e];
+    grid-template-rows: 1fr; 
+    height: 100vh;
+    
+    &__content {
+        background-color: $gray-F8;
+        box-shadow: 0px 0px 20px $gray-D8;
+        height: 100%;
+        grid-column: content-s/content-e;
+        grid-row: 1;
+        padding: 20px;
+    }
+    
+    &__sidebar {  
+        position: fixed;
+        top: 330px;
+        left: 80em;
+
+        font-size: 18px;
+        font-family: $encode;
+        height: 200px;
+        width: 150px;
+        
+
+
+        ul {
+            list-style-type: none;
+
+            li {
+                transition: all .4s ease;
+                padding: 7px;
+                border-right: 3px solid $green-75;
+                padding: 10px;
+                
+                a {
+                    text-decoration: none;
+                    color: $gray-D8;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    font-size: 19px;
+                    border-right: 3px solid $red-BB;
+                }
+            }
+        }
+        
+    }
+}
