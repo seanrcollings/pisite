@@ -1,6 +1,6 @@
 import{ FETCH_STATS, SWAP_DESCRIPTION } from './types'
 
-import stats from './data' 
+import stats from '../data' 
 
 export function fetchStats() {
 
