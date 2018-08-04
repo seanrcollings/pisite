@@ -5,11 +5,9 @@ import * as actions from '../../actions'
 import StatsItem from './statsItem';
 
 class StatsTypes extends Component {
-
-    constructor(props) {
-        super(props)
-
+    componentDidMount() {
         this.props.fetchStats();
+        setInterval(this.props.fetchStats, 30000);
     }
 
     render() {
