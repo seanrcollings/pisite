@@ -1,2 +1,2 @@
-export const FETCH_STATS = 'FETCH_STATS';
 export const SWAP_DESCRIPTION = 'SWAP_DESCRIPTION';
+export const SET_STATS = 'SET_STATS';
