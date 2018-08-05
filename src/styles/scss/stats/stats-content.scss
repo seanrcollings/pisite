@@ -7,3 +7,12 @@
     grid-template-rows: 50px [content-s] 1fr [content-e];
     justify-items: center;
 }
+
+
+.tip {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: white;
+    padding: 20px; 
+}

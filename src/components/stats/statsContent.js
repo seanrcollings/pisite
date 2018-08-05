@@ -11,7 +11,8 @@ class StatsContent extends Component {
                 <StatsDetails />
             </div>,
             <div className='clip-path-stats'/>,
-            <div className='clip-path-stats__border'/>
+            <div className='clip-path-stats__border'/>,
+            <div className='tip'>Data is automatically refreshed every minute or so. No need to reload the page!</div>
         ];
     }
 }
