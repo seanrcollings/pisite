@@ -1,59 +1,99 @@
 import React from 'react';
 
-import npmInstallImage from '../../img/npminstall.PNG'
+import npmInstallImage from '../../img/npminstall.png';
+import npmStartImage from '../../img/npmstart.png';
+import sshImage from '../../img/ssh.png';
+import apacheImage from '../../img/apacheinstall.PNG'
 
 export default function HowToContent() {
-	return [
+	return (
 		<div className='howto-grid__content'>
-			<h2 id='installation'>What you need to install</h2>
+
+			<div className = 'install-container'>
+				<h2 id='installation'>What you need to install</h2>
 				<ul>
 					<li><a href = 'https://nodejs.org/en/download/'>Node Server</a></li>
 					<li><a href ='https://www.python.org/'>Python</a></li>
 					<li><a href = 'https://code.visualstudio.com/'>Text Editor (Visual Studio Reccomended)</a></li>
 					<li><a href = 'https://www.cygwin.com/'>If on Windows, install some sort of Linux terminal emulator (Cygwin, Git Bash, Cmder)</a></li>
+					<li><a href = 'https://httpd.apache.org/download.cgi#apache24'>Apache Web Server (On the Pi)</a></li>
 				</ul>
+			</div>
 
-			<h2 id='development'>Setting up the Development Enviorment</h2>
-			<p>
-				First off, run <code>git clone https://github.com/seanrcollings/PiSite</code> to pull down the repository, or go the 
-				<a href = 'https://github.com/seanrcollings/PiSite'>GitHub page</a> and download it manually. Now cd into the PiSite directory and
-				run <code>npm install</code> (The Node Package Manager should have come with the node server). This command will install all the
-				dependancies that the Site requires. Now run <code>npm start</code> and the devlopment server should start itself 
-            </p>
-			<img src={npmInstallImage}/>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan tortor quis pharetra malesuada. Phasellus hendrerit aliquet tincidunt.
-				Integer non dignissim nunc. Suspendisse in massa dignissim, laoreet risus non, porta mi. Donec posuere at sapien non luctus. Nulla nulla urna, lobortis a tristique at,
-				efficitur id erat. Etiam in libero quam. Suspendisse id bibendum tellus.Ut tempus libero non nibh ornare hendrerit. Nulla lobortis velit sit amet felis dignissim egestas. Ut luctus,
-				urna ut ultrices aliquet, neque felis laoreet dolor, eget posuere elit risus vel eros. Etiam congue finibus nisi, a porta urna blandit a. Vestibulum lacinia efficitur neque, ut
-				auctor justo placerat et. Curabitur quis velit finibus, rutrum ipsum et, accumsan risus. Suspendisse potenti. In justo mauris, placerat id risus eu, varius mollis dui. Mauris a
-				scelerisque dolor. Nullam non rutrum dolor. Sed enim dui, maximus a nulla eget, laoreet dapibus nulla. Nulla facilisi. Donec et viverra felis. Pellentesque placerat at orci quis
-				pulvinar. Aliquam erat volutpat. Suspendisse luctus enim quis aliquam dictum. Nulla vitae volutpat risus. Morbi in ante justo. Proin mattis commodo facilisis. Phasellus interdum vitae
-				nulla sed tempus. Mauris nec porttitor nulla. Aenean ac arcu molestie dolor bibendum pulvinar in non diam. Fusce molestie molestie semper. Phasellus non erat finibus, vulputate dolor
-				a, viverra eros. Vestibulum eleifend laoreet ligula, in ultrices nisi finibus quis. Ut tincidunt fringilla nisl, ut vulputate ligula ultrices id. Integer tincidunt purus sit amet dolor
-				ultricies luctus. Vestibulum quis leo dictum, ornare quam sit amet, convallis nibh. Suspendisse interdum eros sit amet ante scelerisque, eu auctor ligula hendrerit. Vestibulum vitae
-				condimentum ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam in lectus dui. Ut ultrices, ante non consequat gravida, felis turpis
-				tincidunt libero, quis lacinia velit nibh a odio. Praesent eu mauris gravida, rhoncus eros et, varius massa. Donec quis gravida mi. Mauris aliquet mollis neque, sit amet gravida est
-				eleifend ac. Aenean finibus nulla sed velit eleifend tempus et ut nunc. Donec consequat sapien eget erat viverra, eget tincidunt nisi hendrerit. Ut tincidunt sit amet mauris sit amet
-				pulvinar.
-            </p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan tortor quis pharetra malesuada. Phasellus hendrerit aliquet tincidunt.
-				Integer non dignissim nunc. Suspendisse in massa dignissim, laoreet risus non, porta mi. Donec posuere at sapien non luctus. Nulla nulla urna, lobortis a tristique at,
-				efficitur id erat. Etiam in libero quam. Suspendisse id bibendum tellus.Ut tempus libero non nibh ornare hendrerit. Nulla lobortis velit sit amet felis dignissim egestas. Ut luctus,
-				urna ut ultrices aliquet, neque felis laoreet dolor, eget posuere elit risus vel eros. Etiam congue finibus nisi, a porta urna blandit a. Vestibulum lacinia efficitur neque, ut
-				auctor justo placerat et. Curabitur quis velit finibus, rutrum ipsum et, accumsan risus. Suspendisse potenti. In justo mauris, placerat id risus eu, varius mollis dui. Mauris a
-				scelerisque dolor. Nullam non rutrum dolor. Sed enim dui, maximus a nulla eget, laoreet dapibus nulla. Nulla facilisi. Donec et viverra felis. Pellentesque placerat at orci quis
-				pulvinar. Aliquam erat volutpat. Suspendisse luctus enim quis aliquam dictum. Nulla vitae volutpat risus. Morbi in ante justo. Proin mattis commodo facilisis. Phasellus interdum vitae
-				nulla sed tempus. Mauris nec porttitor nulla. Aenean ac arcu molestie dolor bibendum pulvinar in non diam. Fusce molestie molestie semper. Phasellus non erat finibus, vulputate dolor
-				a, viverra eros. Vestibulum eleifend laoreet ligula, in ultrices nisi finibus quis. Ut tincidunt fringilla nisl, ut vulputate ligula ultrices id. Integer tincidunt purus sit amet dolor
-				ultricies luctus. Vestibulum quis leo dictum, ornare quam sit amet, convallis nibh. Suspendisse interdum eros sit amet ante scelerisque, eu auctor ligula hendrerit. Vestibulum vitae
-				condimentum ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam in lectus dui. Ut ultrices, ante non consequat gravida, felis turpis
-				tincidunt libero, quis lacinia velit nibh a odio. Praesent eu mauris gravida, rhoncus eros et, varius massa. Donec quis gravida mi. Mauris aliquet mollis neque, sit amet gravida est
-				eleifend ac. Aenean finibus nulla sed velit eleifend tempus et ut nunc. Donec consequat sapien eget erat viverra, eget tincidunt nisi hendrerit. Ut tincidunt sit amet mauris sit amet
-				pulvinar.
-            </p>
+			<div className = 'development-container'>
+				<h2 id='development'>Setting up the Development Enviorment</h2>
 
+				<p className = 'howto-grid__paragraph'>
+					First off, run <code>git clone https://github.com/seanrcollings/PiSite</code> to pull down the repository, or go 
+					the <a href = 'https://github.com/seanrcollings/PiSite'>GitHub page</a> and download it manually. Now cd into the PiSite directory and
+					run <code>npm install</code> (The Node Package Manager should have come with the node server). This command will install all the
+					dependancies that the Site requires. Now run <code>npm start</code> and the devlopment server should start itself.
+				</p>
+
+				<div className = 'img-container'>
+					<img src={npmInstallImage} alt = 'npminstall'/>
+					<h5 className = 'img-container__sub'>Output should look something like this</h5>
+				</div>
+
+				<p className = 'howto-grid__paragraph'>
+					With that done, the console should display output similar to that of below. If that's the case, everything is set up correctly and you can view the Site by 
+					pasting <code>localhost:3000</code> into your browser! You are now ready to edit and change things as you like and the server will auto update for you.
+				</p>
+
+				<div className = 'img-container'>
+					<img src={npmStartImage} alt = 'npmstart'/>
+					<h5 className = 'img-container__sub'>This is how the Git bash displays it, others may looks slightly different</h5>
+				</div>
+				
+				<subsection>
+					<h4 id = 'scratch'>Starting from Scratch</h4>
+					<p className = 'howto-grid__paragraph'>
+						Keep in mind that the above instructions are just if you want to use my app for your Raspberry Pi. It will work just as well to create your own website from scratch.
+						If you want to do that, I would reccomend referencing <a href = 'https://github.com/facebook/create-react-app'>Facebook's instructions </a> on how to start up your 
+						own app.
+					</p>
+				</subsection>
+
+				<hr/>
+			</div>
+
+			<div className = 'production-container'>
+				<h2 id='production'>Setting up the Production Enviroment</h2>
+				<p className = 'howto-grid__paragraph'>
+					With the development version now running, we can transition it to a production enviroment on the Raspberry Pi itself. I am going to be SSHing into my Pi and just
+					interacting with it through the command line, but you could do many of these actions in the Pi's actual interface.
+				</p>
+				
+				<subsection>
+					<h4>Remotely Connecting To Your Pi Through SSH</h4>
+					<p className = 'howto-grid__paragraph'>Open a new command prompt and type in this command: </p>
+					<div className = 'img-container'>
+						<img src={sshImage}/>
+						<h5 className = 'img-container__sub'>Replace <em> 192.164.0.4 </em> wih your Pi's IP or hostname</h5>
+					</div>
+					<p className = 'howto-grid__paragraph'>
+						Your's will likely ask for the user account's password. When you enter it in, you will be logged into you Pi remotely. Now you have full access to the Pi's shell
+						and can interact with it in any way that you could if you actually had the Pi infront of you.
+					</p>
+				</subsection>
+
+				<subsection>
+					<h4>Installing Apache</h4>
+					<p className = 'howto-grid__paragraph'>
+						The first thing you need to do in the Pi, is install Apache. Apache is an open source HTTP server that lets you serve the pages of your website out onto the 
+						internet. To install Apache 2.4, run the following command: 
+					</p>
+					<div className = 'img-container'>
+						<img src={apacheImage}/>
+						<h5 className = 'img-container__sub'>Type Y until you get back to the command prompt</h5>
+					</div>
+					<p className = 'howto-grid__paragraph'>
+						With that, you are pretty much ready to serve webpages from your Pi! To test if it's working, move into Apache's default location for serving 
+						files: <code>/var/www/html/</code> and create an index.html with some simple content. Now open a browser and type your Pi's IP adress into the url bar. It should
+						display whatever content you put in that file.
+					</p>
+				</subsection>
+			</div>
 		</div>
-	]
+	)
 }

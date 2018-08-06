@@ -7,52 +7,32 @@ export default class Sidebar extends Component {
 
 		const sidebarItems = [
 			{
-				title: 'Sidebar 1',
-				link: '#heading1'
+				title: 'Installation',
+				link: '#installation'
 			},
 			{
-				title: 'Sidebar 2',
-				link: '#'
+				title: 'Development',
+				link: '#development'
 			},
 			{
-				title: 'Sidebar 3',
-				link: '#'
+				title: 'Starting from Scratch',
+				link: '#scratch'
 			},
 			{
-				title: 'Sidebar 4',
-				link: '#'
-			},
-			{
-				title: 'Sidebar 4',
-				link: '#'
+				title: 'Production',
+				link: '#production'
 			},
 			{
 				title: 'Sidebar 4',
 				link: '#'
 			},
 			{
-				title: 'Sidebar 4',
-				link: '#'
-			},
-			{
-				title: 'Sidebar 4',
-				link: '#'
-			},
-			{
-				title: 'Sidebar 4',
-				link: '#'
-			},
-			{
-				title: 'Sidebar 4',
-				link: '#'
-			},
-			{
-				title: 'Sidebar 4',
+				title: 'Back to the Top',
 				link: '#'
 			},
 		]
 		return (
-			<div className='howto-grid__sidebar'>
+			<div className='sidebar'>
 				<ul>
 					{
 						sidebarItems.map((item, index) => {
