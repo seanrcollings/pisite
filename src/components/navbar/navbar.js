@@ -5,13 +5,13 @@ import NavBarItem from './navbarItem';
 
 
 export default class NavBar extends Component {
-    render() {
-         return (
-            <div className = 'navbar'>
-                <Logo path = '/'/>
-                <NavBarItem title = 'Pi Stats' path = '/stats'/>
-                <NavBarItem title = 'How To' path = '/howto'/>
-            </div>
-         )
-    }
+	render() {
+		return (
+			<div className='navbar'>
+				<Logo path='/' />
+				<NavBarItem title='Pi Stats' path='/stats' />
+				<NavBarItem title='How To' path='/howto' />
+			</div>
+		)
+	}
 }

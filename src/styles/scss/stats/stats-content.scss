@@ -1,3 +1,9 @@
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr [content-s] 1100px [content-e] 1fr;
+    grid-template-rows: minmax(50px, 1fr) [content-s] 700px [content-e] minmax(50px, 1fr);   
+}
+
 .stats-content {
     grid-row: content-s/content-e;
     grid-column: content-s/content-e;
@@ -6,13 +12,12 @@
     grid-template-columns: [types-s] 1fr [types-e description-s] 1fr [description-e];
     grid-template-rows: 50px [content-s] 1fr [content-e];
     justify-items: center;
-}
 
-
-.tip {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    color: white;
-    padding: 20px; 
+    &__tip {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        color: white;
+        padding: 20px; 
+    }
 }
