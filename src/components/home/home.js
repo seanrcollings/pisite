@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
-import backgroundImg from '../img/blue-mobo.png'
-import NavBar from './navbar/navbar';
+import backgroundImg from '../../img/blue-mobo.png'
 import LinkBoxes from './linkBoxes';
 
 export default class Home extends Component {
     render() {
         return (
             <div className = 'home'>
-                <NavBar />
                 <div className = 'home__title'>
                     <h1>Welcome to our Pi Site</h1>
                     <img src = {backgroundImg} alt = 'backgroung'/>

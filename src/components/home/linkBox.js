@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
 
-import history from '../history';
+import history from '../../history';
 
 export default class LinkBox extends Component {
     constructor(props) {

@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Switch } from 'react-router-dom';
 
 import './styles/main.css'
-
-// import NavBar from './components/navbar/navbar';
-import Home from './components/home';
+import NavBar from './layout';
+import Home from './components/home/home';
 import Stats from './components/stats/stats';
 import HowTo from './components/howto/howto';
-
 import history from './history';
 
 import registerServiceWorker from './registerServiceWorker';
@@ -25,11 +23,11 @@ ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
         <Router history = {history}>
             <Switch>
-                {/* <NavBar> */}
+                <NavBar>
                     <Route path ='/' exact component={Home} />
                     <Route path ='/stats' component={Stats} />
                     <Route path ='/howto' component={HowTo} />
-                {/* </NavBar> */}
+                </NavBar>
             </Switch>
         </Router>
     </Provider>
