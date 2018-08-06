@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
 
-import history from '../history';
+import history from '../../history';
 
 export default class LinkBox extends Component {
 	constructor(props) {
@@ -48,17 +48,15 @@ export default class LinkBox extends Component {
 				<p className='link-box__subtitle' >
 					{this.props.subTitle}
 				</p>
-
-				<a onClick={() => this.handlePush()} className={`link-box__link ${this.state.linkStateClass}`}>
-					Navigate To Page <i className="fas fa-caret-right"></i>
-				</a>
-
-				<AnimateHeight duration={300} height={this.state.height} className='link-box__description'>
-					<div>
-						<p>{this.props.text}</p>
-					</div>
-				</AnimateHeight>
-
+                    <a href = {this.props.link} onClick = {() => this.handlePush()} className = {`link-box__link ${this.state.linkStateClass}`}>
+                        Navigate To Page <i className="fas fa-caret-right"></i>
+                    </a>
+                
+                <AnimateHeight duration = {300} height = {this.state.height} className = 'link-box__description'>
+                    <div>
+                        <p>{this.props.text}</p>
+                    </div>
+                </AnimateHeight>
 			</div>
 		)
 	}

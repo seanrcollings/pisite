@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 
-import backgroundImg from '../img/blue-mobo.png'
-import NavBar from './navbar/navbar';
+import backgroundImg from '../../img/blue-mobo.png'
 import LinkBoxes from './linkBoxes';
 
 export default class Home extends Component {
-	render() {
-		return (
-			<div className='home'>
-				<NavBar />
-				<div className='home__title'>
-					<h1>Welcome to our Pi Site</h1>
-					<img src={backgroundImg} alt='backgroung' />
-				</div>
 
+    render() {
+        return (
+            <div className = 'home'>
+                <div className = 'home__title'>
+                    <h1>Welcome to our Pi Site</h1>
+                    <img src = {backgroundImg} alt = 'backgroung'/>
+                </div>
 				<div className='home__content'>
 					<div className='home__description'>
 						<h2>What's a Pi Site?</h2>
@@ -52,13 +50,11 @@ export default class Home extends Component {
 							Sed consequat libero et vulputate tristique. Sed ac arcu accumsan, blandit sem id, laoreet arcu. Praesent euismod volutpat erat.
                         </p>
 					</div>
-
-					<div id='home__link-boxes'>
-						<LinkBoxes />
-						<LinkBoxes />
-					</div>
-				</div> {/* CONTENT END */}
-			</div>
-		)
-	}
+                        <div id = 'home__link-boxes'>
+                            <LinkBoxes />   
+                        </div>
+                </div> {/* CONTENT END */}
+            </div> 
+         )
+    }
 }
