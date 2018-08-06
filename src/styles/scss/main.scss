@@ -23,4 +23,8 @@ body {
     font-family: $mont;
     color: $gray-4D;
     margin: 0px;
+
+    a {
+        text-decoration: none; 
+    }
 }

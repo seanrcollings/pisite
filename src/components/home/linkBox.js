@@ -49,7 +49,7 @@ export default class LinkBox extends Component {
                         {this.props.subTitle}
                     </p>
 
-                    <a onClick = {() => this.handlePush()} className = {`link-box__link ${this.state.linkStateClass}`}>
+                    <a href = {this.props.link} onClick = {() => this.handlePush()} className = {`link-box__link ${this.state.linkStateClass}`}>
                         Navigate To Page <i className="fas fa-caret-right"></i>
                     </a>
                 
