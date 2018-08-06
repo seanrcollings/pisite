@@ -5,7 +5,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import './styles/main.css'
 import NavBar from './layout';
 import Home from './components/home/home';
-import Stats from './components/stats/stats';
+import Stats from './components/stats/statsContent';
 
 import HowTo from './components/howto/howto';
 import history from './history';
