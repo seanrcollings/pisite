@@ -23,12 +23,12 @@ export default class Sidebar extends Component {
 				link: '#production'
 			},
 			{
-				title: 'Sidebar 4',
-				link: '#'
+				title: 'SSHing into your pi',
+				link: '#ssh'
 			},
 			{
-				title: 'Back to the Top',
-				link: '#'
+				title: 'Installing Apache',
+				link: '#apache'
 			},
 		]
 		return (

@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 
 import Sidebar from './sidebar';
-import HowToContent from './howtoContent';
-import DownloadBoxes from './downloadBoxes';
+import HowToContent from './howtoContent'
+
+
 
 export default class HowTo extends Component {
+
+    backToTop() {
+
+    }
     render() {
          return (
             <div className = 'howto-grid'>
-                {/* <DownloadBoxes /> These make the page more messy at different sizes*/} 
+                {/* <DownloadBoxes />  Unessacary Component, remove later */}
                 <HowToContent />
                 <Sidebar />
                 <div className = 'clip-path-howto'></div>
                 <div className = 'clip-path-howto__border'></div>
-                <button href = '#' className = 'howto-grid__back-to-top'>Back To Top</button>
+                <a href = '#title' className = 'howto-grid__back-to-top'>Back To Top</a>
             </div>
         )
     }
