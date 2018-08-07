@@ -1,0 +1,30 @@
+.sidebar {  
+    font-size: 18px;
+    font-family: $encode;
+    height: 200px;
+    width: 250px;
+    grid-column: sidebar-s/sidebar-e;
+    grid-row: sidebar-s/sidebar-e;
+    align-self: center;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            transition: all .4s ease;
+            border-right: 3px solid $green-75;
+            padding: 10px;
+            
+            a {
+                text-decoration: none;
+                color: $gray-D8;
+            }
+
+            &:hover {
+                cursor: pointer;
+                font-size: 19px;
+                border-right: 3px solid $red-BB;
+            }
+        }
+    }
+}

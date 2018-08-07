@@ -1,8 +1,9 @@
 .link-box {
     display: grid;
     grid-template-rows: [s title-s] 50px [title-e sub-s] 20px [sub-e text-s] 1fr [text-e e];
-    grid-template-columns: [s title-s] 100px [title-e icon-s] 10px [icon-e link-s] 1fr [link-e e];
+    grid-template-columns: [s title-s] minmax(100px, auto) [title-e icon-s] 15px [icon-e link-s] 1fr [link-e e];
     align-items: center; 
+    grid-column-gap: 10px;
     
     background-color: $gray-F8;
     width: 475px;
@@ -11,8 +12,7 @@
     transition: all .3s ease;
     margin: 20px;
     padding: 10px;
-    float: right;
-    margin-right: 250px;
+
 
     &:hover {
         border-left: 9px solid $red-BB;
@@ -39,7 +39,7 @@
         height: auto;
         grid-row: title-s/title-e;
         grid-column: icon-s/icon-e;
-        text-align: right;
+        text-align: center;
         font-size: 25px;
     }
 

@@ -1,11 +1,14 @@
 @import 'variables';
 
 // HOMEPAGE
-@import 'home';
-@import 'link-boxes';
+@import 'home/home';
+@import 'home/page-boxes';
 
 // HOWTO
-@import 'howto-grid';
+@import 'howto/howto-grid';
+@import 'howto/sidebar';
+@import 'howto/img-container';
+@import 'howto/download-boxes';
 
 // STATS
 @import 'stats/stats-content';
@@ -16,6 +19,7 @@
 // HELPERS
 @import 'clip-paths';
 @import 'navbar';
+@import 'link-boxes';
 
 
 body {
@@ -25,5 +29,16 @@ body {
 
     a {
         text-decoration: none; 
+        color: $green-75;
+
+         &:hover {
+            color: $red-BB;
+         }
+    }
+
+    code {
+        background-color: $gray-E6;
+        border-radius: 3px;
+        padding: 5px;
     }
 }

@@ -1,0 +1,6 @@
+.download-boxes {
+  grid-column: 1/2;
+  grid-row: sidebar-s/sidebar-e;
+  margin-left: 20px; }
+  .download-boxes .download-box {
+    width: 300px; }
