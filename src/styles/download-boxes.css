@@ -1,9 +1,6 @@
 .download-boxes {
-  grid-column: empty-s/empty-e;
-  position: fixed;
+  grid-column: 1/2;
+  grid-row: sidebar-s/sidebar-e;
   margin-left: 20px; }
   .download-boxes .download-box {
-    margin-bottom: 0px;
-    margin-top: 0px;
-    width: 430px;
-    background-color: white; }
+    width: 430px; }

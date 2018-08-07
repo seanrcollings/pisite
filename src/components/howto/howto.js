@@ -8,7 +8,7 @@ export default class HowTo extends Component {
     render() {
          return (
             <div className = 'howto-grid'>
-                <DownloadBoxes />
+                {/* <DownloadBoxes /> These make the page more messy at different sizes*/} 
                 <HowToContent />
                 <Sidebar />
                 <div className = 'clip-path-howto'></div>

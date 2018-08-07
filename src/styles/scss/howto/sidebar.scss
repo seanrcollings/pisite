@@ -1,11 +1,14 @@
 .sidebar {  
-    position: fixed;
-    top: 330px;
-    left: 80em;
+    // position: fixed;
+    // top: 330px;
+    // left: 80em;
     font-size: 18px;
     font-family: $encode;
     height: 200px;
     width: 250px;
+    grid-column: sidebar-s/sidebar-e;
+    grid-row: sidebar-s/sidebar-e;
+    align-self: center;
 
     ul {
         list-style-type: none;

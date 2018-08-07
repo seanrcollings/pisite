@@ -3,7 +3,7 @@ import React from 'react';
 import npmInstallImage from '../../img/npminstall.png';
 import npmStartImage from '../../img/npmstart.png';
 import sshImage from '../../img/ssh.png';
-import apacheImage from '../../img/apacheinstall.PNG'
+import apacheImage from '../../img/apacheinstall.png'
 
 export default function HowToContent() {
 	return (
@@ -68,7 +68,7 @@ export default function HowToContent() {
 					<h4>Remotely Connecting To Your Pi Through SSH</h4>
 					<p className = 'howto-grid__paragraph'>Open a new command prompt and type in this command: </p>
 					<div className = 'img-container'>
-						<img src={sshImage}/>
+						<img src={sshImage} alt = 'ssh'/>
 						<h5 className = 'img-container__sub'>Replace <em> 192.164.0.4 </em> wih your Pi's IP or hostname</h5>
 					</div>
 					<p className = 'howto-grid__paragraph'>
@@ -84,7 +84,7 @@ export default function HowToContent() {
 						internet. To install Apache 2.4, run the following command: 
 					</p>
 					<div className = 'img-container'>
-						<img src={apacheImage}/>
+						<img src={apacheImage} alt = 'apache'/>
 						<h5 className = 'img-container__sub'>Type Y until you get back to the command prompt</h5>
 					</div>
 					<p className = 'howto-grid__paragraph'>
