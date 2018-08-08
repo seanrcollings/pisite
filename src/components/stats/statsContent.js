@@ -10,6 +10,7 @@ class Stats extends Component {
                 <div className='stats-content'>
                     <StatsTypes />
                     <StatsDetails />    
+                    <div className = 'stats-content__scroll-tip'>Scroll down to see more stats</div>
                     <div className='stats-content__tip'>Data is automatically refreshed every minute or so. No need to reload the page!</div>
                 </div>
                 <div className='clip-path-stats'/>

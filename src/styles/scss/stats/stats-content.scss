@@ -18,6 +18,17 @@
         bottom: 0;
         right: 0;
         color: white;
-        padding: 20px; 
+        padding: 20px;
+    }
+
+    &__scroll-tip {
+        grid-column: types-s/types-e;
+        grid-row: content-s/content-e;
+        align-self: end;
+        margin-bottom: 60px;
+        height: 20px;
+        font-size: 18px;
+        border-top: 1px solid $green-75;
+        padding-left: 250px;
     }
 }
