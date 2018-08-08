@@ -103,10 +103,10 @@ export default class HowToContent extends Component {
 							</p>
 						</section>
 
-						<section>
+						{/* <section>
 							<h4 id = 'apacheconfig'>Configuring Apache</h4>
 							
-						</section>
+						</section> */}
 					</div>
 				</div>
 			</div>
