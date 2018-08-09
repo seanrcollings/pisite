@@ -20,7 +20,7 @@ class StatsTypes extends Component {
 							return <StatsItem key={stat.id} title={stat.title} id={stat.id} />
 						})
 					}
-					<div className = 'stats-item'></div>
+					<div className = 'stats-types__empty'></div>
 				</div>
 			</div>
 		);

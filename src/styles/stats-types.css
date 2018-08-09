@@ -18,3 +18,5 @@
     height: 560px;
     overflow-y: scroll;
     padding-right: 30px; }
+  .stats-types__empty {
+    height: 60px; }
