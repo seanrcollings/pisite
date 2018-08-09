@@ -2,14 +2,10 @@
     grid-row: content-s/content-e;
     grid-column: description-s/description-e;
 
-    display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: 25px [title-s] 50px [title-e data-s] minmax(100px, 200px) [data-e description-s] 1fr [description-e];
-    grid-row-gap: 25px;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 12.5px;
 
-    // background-color: $gray-F8;
-    // box-shadow: 2px 2px 2px 2px $gray-D8;
     height: 500px;
    
     &__title {
@@ -17,7 +13,7 @@
         font-weight: bold;
         text-align: center;
 
-        grid-row: title-s/title-e;
+        margin: 12.5px;
     }
     &__data {
         text-align: center;
@@ -26,13 +22,12 @@
         color: $green-75;
         font-family: $mont;
 
-        grid-row: data-s/data-e;
+        margin: 12.5px;
     }
     &__description {
-        width: 80%;
-        text-align: justify;
-        text-justify: inter-word;
+        width: 100%;
+        text-align: center;
 
-        grid-row: description-s/description-e;
+        margin: 12.5px;
     }
 }
