@@ -3,6 +3,11 @@ import { connect } from 'react-redux'
 import * as actions from '../../actions'
 
 class StatsDetails extends Component {
+
+	componentDidMount() {
+		this.props.swapDescription();
+		setInterval(this.props.swapDescription, 30000);
+	}
 	render() {
 		const { title, data, description } = this.props.focused
 		return (

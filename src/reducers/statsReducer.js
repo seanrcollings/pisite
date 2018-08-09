@@ -15,7 +15,7 @@ export default function (state = INITIAL_STATE, action) {
 	switch (action.type) {
 		case SWAP_DESCRIPTION:
 			const focusedId = action.payload;
-			let focused = null;
+			let focused = state.focused;
 			state.stats.forEach(stat => {
 				if (stat.id === focusedId) {
 					focused = stat;
