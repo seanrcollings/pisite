@@ -5,7 +5,7 @@ def parseMemory(command_output):
     mem_free = mem[1]
     mem_used = mem_total - mem_free
 
-    mem_percent = str(round((mem_used/mem_total)*100))
+    mem_percent = str((mem_used/mem_total)*100)
     mem_used = str(round(mem_used / 1000, 2))
     mem_total = str(round(mem_total / 1000, 2))
 

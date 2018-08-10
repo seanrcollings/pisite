@@ -43,10 +43,9 @@ data_types = [
 	DataType('User Count', 'How many users are currently logged into the system, will always be atleast 1', "uptime | grep -o '..users'"),
 	DataType('Memory Usage', 'How much memory the Pi is using at the moment', "cat /proc/meminfo | egrep 'MemTotal|MemFree'", parseMemory),
 	DataType('Disk Usage', 'How much space is currently taken up on the Pi', "df -h --total | grep total | grep -o '..%'"),
-	DataType('Internal Temperature', 'The internal temperature of the Raspberry Pi', "/opt/vc/bin/vcgencmd measure_temp | grep -o .....C"),
-	DataType('Top Process PID', 'The PID of the process that is using the most CPU time', "ps -Ao pid --sort=-pcpu | head -n 2 | tr -dc '0-9'"),
+	DataType('Temperature', 'The internal temperature of the Raspberry Pi', "/opt/vc/bin/vcgencmd measure_temp | grep -o .....C"),
+	DataType('Top PID', 'The PID of the process that is using the most CPU time', "ps -Ao pid --sort=-pcpu | head -n 2 | tr -dc '0-9'"),
 	DataType('Process Memory', 'The memory usage of the process that is using the most CPU time', "ps -o pmem --sort=-pmem | head -n 2 | tr -dc '0-9'"), # fixed up some of these commands so they run on the pi
-	DataType('Ur a test face', 'The memory usage of the process that is using the most CPU time', "echo your face")
 ]
 
 for data_type in data_types:
