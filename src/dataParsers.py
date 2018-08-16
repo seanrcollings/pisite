@@ -1,3 +1,5 @@
+import pdb
+
 def parseMemory(command_output):
     mem = [int(char) for char in command_output.split() if char.isdigit()]
 
@@ -6,7 +8,7 @@ def parseMemory(command_output):
     mem_used = mem_total - mem_free
 
     mem_percent = str((mem_used/mem_total)*100)
-    mem_used = str(round(mem_used / 1000, 2))
     mem_total = str(round(mem_total / 1000, 2))
+    pbd.set_trace()
 
-    return mem_percent + '% \n' + mem_used + 'MB'
+    return mem_percent + '% \n' + mem_total + 'MB'
