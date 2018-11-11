@@ -9,8 +9,9 @@ export default class NavBar extends Component {
 		return (
 			<div className='navbar'>
 				<Logo path='/' />
-				<NavBarItem title='Pi Stats' path='/stats' />
-				<NavBarItem title='How To' path='/howto' />
+				<NavBarItem title='Pi Stats' path='/stats' reactRoute = {true}/>
+				<NavBarItem title='How To' path='/howto' reactRoute = {true}/>
+				<NavBarItem title='Master Mind' path='../../mastermind/index.html' reactRoute = {false} />
 			</div>
 		)
 	}
