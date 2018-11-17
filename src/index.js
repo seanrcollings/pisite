@@ -28,7 +28,6 @@ ReactDOM.render(
                     <Route path='/' exact component={Home} />
                     <Route path='/stats' component={Stats} />
                     <Route path='/howto' component={HowTo} />
-					<a href='mastermind/index.html'>MasterMind</a>
 				</NavBar>
 			</Switch>
 		</Router>
