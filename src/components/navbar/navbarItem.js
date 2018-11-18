@@ -22,10 +22,11 @@ export default class NavBarItem extends Component {
 			)
 		}
 	}
+
 	render() {
 		return (
 			<div className='navbar__item'>
-				<a onClick={() => this.handlePush()}>{this.props.title}</a>
+				{this.renderNavBarItem()}
 			</div>
 		)
 	}
