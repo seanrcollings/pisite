@@ -7,9 +7,6 @@ import HowToContent from './howtoContent'
 
 export default class HowTo extends Component {
 
-    backToTop() {
-
-    }
     render() {
          return (
             <div className = 'howto-grid'>
