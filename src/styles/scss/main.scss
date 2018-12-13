@@ -5,10 +5,8 @@
 @import 'home/page-boxes';
 
 // HOWTO
-@import 'howto/howto-grid';
 @import 'howto/sidebar';
 @import 'howto/img-container';
-@import 'howto/download-boxes';
 
 // STATS
 @import 'stats/stats-content';
@@ -17,6 +15,7 @@
 @import 'stats/stats-details';
 
 // HELPERS
+@import 'content/content-grid';
 @import 'clip-paths';
 @import 'navbar';
 @import 'link-boxes';

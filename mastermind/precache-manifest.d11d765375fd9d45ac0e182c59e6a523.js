@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/mastermind/static/js/runtime~main.7949a57b.js"
   },
   {
-    "revision": "a1dd61de5fc871a9948e",
-    "url": "/mastermind/static/js/main.a1dd61de.chunk.js"
+    "revision": "c69bebf52deb221c58f5",
+    "url": "/mastermind/static/js/main.c69bebf5.chunk.js"
   },
   {
     "revision": "157632d0051fa745eb9d",
     "url": "/mastermind/static/js/1.157632d0.chunk.js"
   },
   {
-    "revision": "a1dd61de5fc871a9948e",
-    "url": "/mastermind/static/css/main.5b51b6f4.chunk.css"
+    "revision": "c69bebf52deb221c58f5",
+    "url": "/mastermind/static/css/main.6bcefb9e.chunk.css"
   },
   {
-    "revision": "55d1a743cf7346060a4bdddb090eadc7",
+    "revision": "ae24d17d3f7f185a55b48be3562e5140",
     "url": "/mastermind/index.html"
   }
 ];

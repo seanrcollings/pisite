@@ -6,6 +6,7 @@ import './styles/main.css'
 import NavBar from './layout';
 import Home from './components/home/home';
 import Stats from './components/stats/statsContent';
+import Portfolio from './components/portfolio/portfolio';
 
 import HowTo from './components/howto/howto';
 import history from './history';
@@ -28,6 +29,7 @@ ReactDOM.render(
                     <Route path='/' exact component={Home} />
                     <Route path='/stats' component={Stats} />
                     <Route path='/howto' component={HowTo} />
+					<Route path='/portfolio' component={Portfolio} />
 				</NavBar>
 			</Switch>
 		</Router>
