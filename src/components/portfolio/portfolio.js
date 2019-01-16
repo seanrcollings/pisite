@@ -4,6 +4,26 @@ import PortfolioContent from './portfolioContent';
 
 class Portfolio extends Component {
     sidebarItems = [
+        {
+            title: 'Achievments',
+            link: '#achievments'
+        },
+        {
+            title: 'Community Service',
+            link: '#service'
+        },
+        {
+            title: 'Leadership',
+            link: '#leadership'
+        },
+        {
+            title: 'Unique Qualties',
+            link: '#unique'
+        },
+        {
+            title: 'Life Enrichment',
+            link: '#life'
+        },
     ]
 
     render() {

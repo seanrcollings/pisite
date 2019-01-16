@@ -1,0 +1,24 @@
+
+.intro {
+    &-blurb {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: [s img-s] 1fr [img-e text-s] 4fr [text-e e];
+        ul {
+            list-style: none;
+            display: inline-block;
+            color: $green-75;
+            font-size: 20px;
+        }
+        img {
+            width: 180px;
+            height: 225px;
+        }
+    }
+}
+
+.description {
+    margin-left: 15px;
+}
+
+
