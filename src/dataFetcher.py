@@ -2,7 +2,7 @@ import json; import hashlib; import subprocess
 
 from dataParsers import *
 
-data_objects = []
+data_objects = {}
 
 class DataType():
 	def __init__(self, title, description, command, parser = False):
@@ -21,7 +21,7 @@ class DataType():
 		else:
 			data = command_output
 			
-		data_objects.append(self.get_object(data))
+		data_objects[self.id] = self.get_object(data)
 
 	def get_object(self, data):
 		return {
