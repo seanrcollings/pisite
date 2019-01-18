@@ -5,7 +5,7 @@ import * as actions from '../../actions'
 class StatsDetails extends Component {
 
 	render() {
-		const { title, data, description } = (this.props.stat !== undefined ? this.props.stat : this.props.focused)
+		const {title, data, description} = (this.props.widgetStat !== undefined ? this.props.widgetStat : this.props.stat);
 		return (
 			<div className='stat-details'>
 				<div className='stat-details__title'>{title}</div>
@@ -17,9 +17,19 @@ class StatsDetails extends Component {
 }
 
 function mapStateToProps(state) {
-	const focused = state.stats.focused;
+	let stat;
+	if (state.stats.focused === 'default'){
+		stat = {
+			title: 'Select a Data Type',
+			data: 'None Selected',
+			description: "",
+			id: 0
+		}
+	} else {
+		stat = state.stats.stats[state.stats.focused];
+	}
 	return {
-		focused
+		stat
 	}
 }
 

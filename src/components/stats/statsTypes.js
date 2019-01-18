@@ -7,7 +7,7 @@ import StatsItem from './statsItem';
 class StatsTypes extends Component {
 	componentDidMount() {
 		this.props.fetchStats();
-		setInterval(this.props.fetchStats, 30000);
+		setInterval(this.props.fetchStats, 1000);
 	}
 
 	render() {

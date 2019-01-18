@@ -9,7 +9,7 @@ class StatsItem extends Component {
 	}
 
 	render() {
-		const focusedID = this.props.focused.id;
+		const focusedID = this.props.focused;
 		const id = this.props.id
 		return (
 			<div

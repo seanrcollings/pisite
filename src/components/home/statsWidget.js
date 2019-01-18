@@ -12,14 +12,14 @@ class StatsWidget extends Component {
   render() {
     return (
       <div className='stats-widget'>
-      <StatsDetails stat = {this.props.stat}/>
+      <StatsDetails widgetStat = {this.props.stat} />
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  let stat = state.stats.stats[Math.floor(Math.random() * 10)]
+  let stat = Object.values(state.stats.stats)[Math.floor(Math.random() * 10)]
   return {
     stat
   }

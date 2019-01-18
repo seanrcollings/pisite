@@ -2,12 +2,7 @@ import { SET_STATS, SWAP_DESCRIPTION } from '../actions/types';
 
 const INITIAL_STATE = {
 	stats: {},
-	focused: {
-		title: 'Select a Data Type',
-		data: 'None Selected',
-		description: "",
-		id: 0
-	}
+	focused: 'default'
 }
 
 
@@ -18,7 +13,7 @@ export default function (state = INITIAL_STATE, action) {
 			let focused = state.focused;
 			Object.values(state.stats).forEach(stat => {
 				if (stat.id === focusedId) {
-					focused = state.stats[focusedId];
+					focused = focusedId
 				}
 			})
 			return {
