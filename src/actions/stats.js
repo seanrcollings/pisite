@@ -14,6 +14,7 @@ export function fetchStats() {
 }
 
 export function swapDescription(id) {
+	console.log('swapping description')
 	return {
 		type: SWAP_DESCRIPTION,
 		payload: id
