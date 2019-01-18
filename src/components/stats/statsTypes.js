@@ -16,7 +16,7 @@ class StatsTypes extends Component {
 				<div className='stats-types__title'>Data Types</div>
 				<div className='stats-types__items'>
 					{
-						this.props.stats.map(stat => {
+						Object.values(this.props.stats).map(stat => {
 							return <StatsItem key={stat.id} title={stat.title} id={stat.id} />
 						})
 					}

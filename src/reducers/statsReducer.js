@@ -1,13 +1,15 @@
 import { SET_STATS, SWAP_DESCRIPTION } from '../actions/types';
 
 const INITIAL_STATE = {
-	stats: [],
-	focused: {
-		title: 'Select a Data Type',
-		data: 'None Selected',
-		description: "",
-		id: 0
-	}
+	stats: {
+		'default' : {
+			title: 'Select a Data Type',
+			data: 'None Selected',
+			description: "",
+			id: 0
+		}
+	},
+	focused: {stats: 'default'}
 }
 
 
