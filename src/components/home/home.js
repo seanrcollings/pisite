@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import backgroundImg from '../../img/blue-mobo.png'
+import logo from '../../img/logo-color.png'
 import LinkBoxes from './linkBoxes';
 
 export default class Home extends Component {
@@ -33,9 +34,8 @@ export default class Home extends Component {
 							JSON file.
                         </p>
 					</div>
-                        <div id = 'home__link-boxes'>
-                            <LinkBoxes />   
-                        </div>
+                    <img src = {logo} />
+                    <LinkBoxes />   
                 </div> {/* CONTENT END */}
             </div> 
          )

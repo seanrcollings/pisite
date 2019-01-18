@@ -29,7 +29,7 @@ export default class LinkBoxes extends Component {
 			}
 		]
 		return (
-			<div id = 'link-boxes'>
+			<div className = 'home__link-boxes'>
 				{
 					boxes.map((data, index) => {
 						return <LinkBox className = {'page-box'} key = {index} {...data} id = {index}/>

@@ -5,7 +5,7 @@
     align-items: center; 
     grid-column-gap: 10px;
     
-    background-color: $gray-F8;
+    background-color: $gray-E6;
     width: 475px;
     border-left: 9px solid $green-75 ;
 
@@ -16,7 +16,7 @@
 
     &:hover {
         border-left: 9px solid $red-BB;
-        box-shadow: 0px 0px 10px $gray-D8;
+        box-shadow: 0px 0px 10px $gray-E6;
 
         .link-box__title {
             font-size: 24px;
@@ -41,6 +41,10 @@
         grid-column: icon-s/icon-e;
         text-align: center;
         font-size: 25px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__subtitle {
@@ -52,6 +56,7 @@
 
     &__description {
         padding-top: 10px;
+        padding-bottom: 10px;
         grid-row: text-s/text-e;
         grid-column: 1/link-e;
     }
@@ -61,7 +66,6 @@
         font-size: 15px;
         color: $red-BB;
         opacity: 0;
-        transform: translateX(30px);
 
         grid-row: s/e;
         grid-column: link-s/link-e;
@@ -74,7 +78,6 @@
 
         &-show {
             opacity: 1;
-            transform: translateX(0px);
         }
     }
 }

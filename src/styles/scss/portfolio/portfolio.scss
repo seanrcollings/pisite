@@ -4,11 +4,19 @@
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: [s img-s] 1fr [img-e text-s] 4fr [text-e e];
+        background-color: $gray-E6;
+        padding: 10px;
+        border-radius: 5px;
+
         ul {
             list-style: none;
             display: inline-block;
             color: $green-75;
             font-size: 20px;
+        }
+        img {
+            border: 3px solid $green-75;
+            border-radius: 5px;
         }
     }  
 }

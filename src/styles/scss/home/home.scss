@@ -26,16 +26,33 @@
     /* ========= CONTENT ========== */
     
     &__content {
+        display: grid;
+        grid-template-rows: 1fr [link-s] .5fr [link-e];
+        grid-template-columns: [s desc-s] 1fr [desc-e link-s] 1fr [link-e e];
         margin: 22px;
+
+        img {
+            width: 450px;
+            height: 450px;
+            justify-self: center;
+        }
     }
     
     &__description {
-        background-color: $gray-F8;
+        background-color: $gray-E6;
         border-radius: 5px;
         padding: 2em;
-        width: 50%;
         float: left;
         height: 400px;
+    }
+
+    &__link-boxes {
+        grid-row: link-s/link-e;
+        grid-column: s/e;
+
+        display: flex;
+        
+        justify-content: space-evenly;
     }
 
     @media only screen and (max-width: 48em) {

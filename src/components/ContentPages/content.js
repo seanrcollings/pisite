@@ -4,7 +4,11 @@ export default class Content extends Component {
 
 	render() {
 		return (
-            this.props.children
+		<div className='content-grid__content'>
+			<div className='content-grid__wrapper'>
+            		{this.props.children}
+			</div>
+		</div>
 		)
 	}
 }

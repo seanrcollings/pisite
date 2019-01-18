@@ -35,28 +35,29 @@ export default class LinkBox extends Component {
 
 	render() {
 		return (
+			<div className='link-box-wrapper'>
+				<div className={`link-box ${this.props.className}`} onMouseEnter={() => this.toggleLink()} onMouseLeave={() => this.toggleLink()}>
+					<h2 className='link-box__title'>
+						{this.props.title}
+					</h2>
 
-			<div className={`link-box ${this.props.className}`} onMouseEnter={() => this.toggleLink()} onMouseLeave={() => this.toggleLink()}>
-				<h2 className='link-box__title'>
-					{this.props.title}
-				</h2>
+					<div onClick={() => this.toggleHeight()} className={`link-box__icon ${this.state.height === 'auto' ? 'arrow-up' : ''}`}>
+						<i className="fas fa-caret-down"></i>
+					</div>
 
-				<div onClick={() => this.toggleHeight()} className={`link-box__icon ${this.state.height === 'auto' ? 'arrow-up' : ''}`}>
-					<i className="fas fa-caret-down"></i>
+					<p className='link-box__subtitle' >
+						{this.props.subTitle}
+					</p>
+						<a href = {this.props.link} onClick = {() => this.handlePush()} className = {`link-box__link ${this.state.linkStateClass}`}>
+							{this.props.linkName} <i className="fas fa-caret-right"></i>
+						</a>
+					
+					<AnimateHeight duration = {300} height = {this.state.height} className = 'link-box__description'>
+						<div>
+							<p>{this.props.text}</p>
+						</div>
+					</AnimateHeight>
 				</div>
-
-				<p className='link-box__subtitle' >
-					{this.props.subTitle}
-				</p>
-                    <a href = {this.props.link} onClick = {() => this.handlePush()} className = {`link-box__link ${this.state.linkStateClass}`}>
-                        {this.props.linkName} <i className="fas fa-caret-right"></i>
-                    </a>
-                
-                <AnimateHeight duration = {300} height = {this.state.height} className = 'link-box__description'>
-                    <div>
-                        <p>{this.props.text}</p>
-                    </div>
-                </AnimateHeight>
 			</div>
 		)
 	}
