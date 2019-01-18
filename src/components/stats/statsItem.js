@@ -6,7 +6,6 @@ class StatsItem extends Component {
 
 	handleDetailSwap() {
 		this.props.swapDescription(this.props.id)
-		setInterval(() => {this.props.swapDescription(this.props.id)}, 3000)
 	}
 
 	render() {
