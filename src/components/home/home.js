@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import backgroundImg from '../../img/blue-mobo.png'
-import logo from '../../img/logo-color.png'
 import LinkBoxes from './linkBoxes';
+import StatsWidget from './statsWidget'
 
 export default class Home extends Component {
 
@@ -14,7 +14,7 @@ export default class Home extends Component {
                     <img src = {backgroundImg} alt = 'backgroung'/>
                 </div>
 				<div className='home__content'>
-					<div className='home__description'>
+                    <div className='home__description'>
 						<h2>What is a Pi Site?</h2>
 
 						<p>
@@ -34,8 +34,11 @@ export default class Home extends Component {
 							JSON file.
                         </p>
 					</div>
-                    <img src = {logo} />
-                    <LinkBoxes />   
+                    <LinkBoxes />
+                    <div className='home__widget'>
+                        <StatsWidget /> 
+                        <span className = 'home__widget-text'>Here's a sneak peak of what you'll see on the Stats page!</span>  
+                    </div>
                 </div> {/* CONTENT END */}
             </div> 
          )

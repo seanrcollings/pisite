@@ -5,7 +5,7 @@ import * as actions from '../../actions'
 class StatsDetails extends Component {
 
 	render() {
-		const { title, data, description } = this.props.focused
+		const { title, data, description } = (this.props.stat !== undefined ? this.props.stat : this.props.focused)
 		return (
 			<div className='stat-details'>
 				<div className='stat-details__title'>{title}</div>

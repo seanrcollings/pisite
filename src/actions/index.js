@@ -1,9 +1,9 @@
 import {
 	fetchStats,
-	swapDescription
+	swapDescription,
 } from './stats'
 
 export {
 	fetchStats,
-	swapDescription
+	swapDescription,
 }

@@ -2,6 +2,7 @@ import { SET_STATS, SWAP_DESCRIPTION } from '../actions/types';
 
 const INITIAL_STATE = {
 	stats: [],
+	widget: null,
 	focused: {
 		title: 'Select a Data Type',
 		data: 'None Selected',
