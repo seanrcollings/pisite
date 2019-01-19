@@ -3,6 +3,7 @@ import Content from '../ContentPages/content';
 import PortfolioCerts from './portfolioCerts';
 
 import seanCollings from '../../img/SeanCollings.png';
+import ContentLinks from '../ContentPages/contentLinks';
 
 export default class PortfolioContent extends Component {
 	render() {
@@ -17,9 +18,13 @@ export default class PortfolioContent extends Component {
 							<li>Ridgeline's Sterling Scholar Representative for Computer Technology</li>
 							<li>Aspring Computer Programmer</li>
 						</ul>
+						<div className ='intro-links'>
+							<ContentLinks link='https://github.com/seanrcollings' title='GitHub'/>
+							<ContentLinks link='#certs' title='Certifications'/>
+							<ContentLinks link='mailto:seanrcollings@gmail.com?subject=Pi Site' title='Email Me'/>
+						</div>
 					</div>
 				</div>
-
 
 				<div id='achievments'>
 					<h2>Achievements / Activities</h2>
@@ -47,7 +52,7 @@ export default class PortfolioContent extends Component {
 						<p>The class also has taught me a lot about people. While most were diligent and willing to do their work, plenty had difficulty remaining focused throughout the majority of the course. The coursework is paced by the individual so one can do really well and excel or do nothing at all. It showed me that I would have to deal with these kinds of people throughout my life and taught me that I didn&rsquo;t want to be one of them. No matter what, I always want to put 100% into what I do.</p> 
 					</div>
 				</div>
-
+				
 
 				<div id ='service'>
 					<h2>Community Service</h2>
@@ -100,6 +105,7 @@ export default class PortfolioContent extends Component {
 					<h2 className='description-title'>Certifications</h2>
 					<PortfolioCerts/>
 				</div>
+
 			</Content>
 		)
 	}

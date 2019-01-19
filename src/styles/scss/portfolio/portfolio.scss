@@ -2,12 +2,12 @@
 .intro {
     &-blurb {
         display: grid;
-        grid-template-rows: 1fr;
+        grid-template-rows: 2fr .8fr;
         grid-template-columns: [s img-s] 1fr [img-e text-s] 4fr [text-e e];
         background-color: $gray-E6;
         padding: 10px;
         border-radius: 5px;
-
+        
         ul {
             list-style: none;
             display: inline-block;
@@ -17,8 +17,17 @@
         img {
             border: 3px solid $green-75;
             border-radius: 5px;
+            grid-column: img-s/img-e;
+            grid-row: 1/-1;
         }
-    }  
+    }
+
+    &-links {
+        grid-column: text-s/text-e;
+        margin-left: 40px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .description {
@@ -28,6 +37,9 @@
     margin-bottom: 20px;
     border-radius: 5px;
 }
+
+
+
 
 .certs {
     &-buttons {
@@ -80,4 +92,5 @@
         background-color: $gray-4D; 
     }
 }
+
 
