@@ -29,7 +29,7 @@ class DataType():
 			"title": str(self.title),
 			"data": str(data),
 			"description": str(self.description),
-			"id": self.id
+			"id": self.id,
 			"order": self.order
 		}
 
