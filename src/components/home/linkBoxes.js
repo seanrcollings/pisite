@@ -9,7 +9,7 @@ export default class LinkBoxes extends Component {
 			{
 				title: 'Stats',
 				subTitle: 'Check Stats from the pi',
-				text: "Information on what is on the the Pi or what it is doing are displayed here, additionally any data gathered by sensors attached to the Pi's GPIO pins will also be displayed here.",
+				text: "Information on what is on the the Pi or what it is doing are displayed here.",
 				path: '/stats',	
 				linkName: 'Navigate to Page'
 			},
@@ -23,10 +23,10 @@ export default class LinkBoxes extends Component {
 			{
 				title: 'Github',
 				subTitle: 'Check out the source code',
-				text : "This is the github repository for this site. You can download and mess with it if you'd like. Check the README for directions on how to get it running on your own machine.",
+				text : "This is the Github repository for this site. You can download and mess with it if you'd like.",
 				link: 'https://github.com/seanrcollings/PiSite',
 				linkName: 'Go To Repository'
-			}
+			},
 		]
 		return (
 			<div className = 'home__link-boxes'>

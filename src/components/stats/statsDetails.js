@@ -18,7 +18,7 @@ class StatsDetails extends Component {
 
 function mapStateToProps(state) {
 	let stat;
-	if (state.stats.focused === 'default'){
+	if(state.stats.focused === 'default'){
 		stat = {
 			title: 'Select a Data Type',
 			data: 'None Selected',

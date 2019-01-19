@@ -24,6 +24,10 @@ class Portfolio extends Component {
             title: 'Life Enrichment',
             link: '#life'
         },
+        {
+            title: 'Certifications',
+            link: '#certs'
+        }
     ]
 
     render() {

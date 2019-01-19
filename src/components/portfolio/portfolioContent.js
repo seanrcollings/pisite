@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Content from '../ContentPages/content';
+import PortfolioCerts from './portfolioCerts';
 
-import seanCollings from '../../img/SeanCollings.png'
+import seanCollings from '../../img/SeanCollings.png';
 
 export default class PortfolioContent extends Component {
 	render() {
@@ -93,6 +94,11 @@ export default class PortfolioContent extends Component {
 					<p>For much of my life, I&rsquo;ve focused on generating a good income for me and a potential future family. However, over time I have found that a big reason that I keep pursuing computer technology is because I genuinely enjoy it. Whenever I program something that works and does something interesting, I feel a huge amount of satisfaction well up within me. That same feeling comes whenever I help someone with hardware or software problem. Because I have become fairly knowledgeable in the field, I can extend my help out towards others and feel satisfied when my assistance does genuinely help them.</p>
 					<p>Often when I&rsquo;m nervous&mdash;as I&rsquo;m sure is true with many people&mdash;I begin to shake and perform worse overall. However, when I&rsquo;m working on computer parts, like doing a PC teardown in my IT class, the opposite seems to happen. My hands became steady and my focus increases. I excel under the pressure and do an excellent teardown and rebuild of the PC. Such experiences show that I have confidence to work effectively with computers, even in tough situations.</p>
 					<p>Additionally, the community around programming or computers in general is one of the most helpful and expansive I&rsquo;ve ever been a part of. No matter your problem, there is almost always someone out there willing and able to help you. This gives a great sense of community and is one that I am proud to share in. I hope to continue to grow and develop in these extremely helpful communities as I grow in the field.</p>
+				</div>
+
+				<div id='certs' className='certs'>
+					<h2 className='description-title'>Certifications</h2>
+					<PortfolioCerts/>
 				</div>
 			</Content>
 		)

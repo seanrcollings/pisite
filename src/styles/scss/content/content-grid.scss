@@ -44,6 +44,7 @@
         color: white;
         font-weight: 700;
         border: none;
+        animation: all .2s ease;
 
         &:hover {
             background-color: $red-BB;
@@ -53,6 +54,7 @@
 
         &:active {
             outline-color: $red-BB;
+            font-size: 15px;
         }
     }
 

@@ -19,7 +19,8 @@ class StatsWidget extends Component {
 }
 
 function mapStateToProps(state) {
-  let stat = Object.values(state.stats.stats)[Math.floor(Math.random() * 10)]
+  let stat = Object.values(state.stats.stats)[Math.floor(Math.random() * Object.values(state.stats.stats).length)]
+  console.log(state)
   return {
     stat
   }

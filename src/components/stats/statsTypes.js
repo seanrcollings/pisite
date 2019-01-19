@@ -10,16 +10,25 @@ class StatsTypes extends Component {
 		setInterval(this.props.fetchStats, 30000);
 	}
 
+	sortDataTypes() {
+		return Object.values(this.props.stats).sort((stat1, stat2) => {
+			return stat1.order - stat2.order
+		})
+	}
+
+	renderDataTypes(stats) {
+		console.log(stats)
+		return stats.map(stat => {
+			return <StatsItem key={stat.id} title={stat.title} id={stat.id} />
+		})
+	}
+
 	render() {
 		return (
 			<div className='stats-types'>
 				<div className='stats-types__title'>Data Types</div>
 				<div className='stats-types__items'>
-					{
-						Object.values(this.props.stats).map(stat => {
-							return <StatsItem key={stat.id} title={stat.title} id={stat.id} />
-						})
-					}
+					{ this.renderDataTypes(this.sortDataTypes())}
 					<div className = 'stats-types__empty'></div>
 				</div>
 			</div>
