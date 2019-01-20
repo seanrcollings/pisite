@@ -73,11 +73,13 @@
 
 
 .content-link {
-    width: auto;
     padding: 5px;
-
+    height: 26px;
+    display: flex;
+    
     a {
         padding: 5px;
+        width: auto;
         font-size: 14px;
         border-radius: 5px;
         color: white;
@@ -85,6 +87,10 @@
         font-family: $raleway;
         background-color: $green-75;
     }
+}
+
+.link-icon {
+    margin-right: 5px;
 }
 
 

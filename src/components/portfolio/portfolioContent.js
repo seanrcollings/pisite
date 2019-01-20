@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Content from '../ContentPages/content';
 import PortfolioCerts from './portfolioCerts';
+import ContentLinks from '../ContentPages/contentLinks';
 
 import seanCollings from '../../img/SeanCollings.png';
-import ContentLinks from '../ContentPages/contentLinks';
 
 export default class PortfolioContent extends Component {
 	render() {
@@ -19,9 +19,9 @@ export default class PortfolioContent extends Component {
 							<li>Aspring Computer Programmer</li>
 						</ul>
 						<div className ='intro-links'>
-							<ContentLinks link='https://github.com/seanrcollings' title='GitHub'/>
-							<ContentLinks link='#certs' title='Certifications'/>
-							<ContentLinks link='mailto:seanrcollings@gmail.com?subject=Pi Site' title='Email Me'/>
+							<ContentLinks link='https://github.com/seanrcollings' title='GitHub' icon='fab fa-github'/>
+							<ContentLinks link='#certs' title='Certifications' icon='fas fa-file'/>
+							<ContentLinks link='mailto:seanrcollings@gmail.com?subject=Pi Site Email' title='Email Me' icon='fas fa-envelope'/>
 						</div>
 					</div>
 				</div>
@@ -29,18 +29,20 @@ export default class PortfolioContent extends Component {
 				<div id='achievments'>
 					<h2>Achievements / Activities</h2>
 					<ul>
-						<li>Bridgerland IT STEM: Comprehensive course covering a multitude of IT related concepts such as:</li>
+						<li><span className='achievments-title'>Bridgerland IT STEM:</span> Comprehensive course covering a multitude of IT related concepts such as:</li>
 						<ul>
-							<li>PC Pro: Course outlining many of the fundamentals of computer and electronic devices management</li>
-							<li>Networking Pro: Comprehensive course all about computer networking</li>
-							<li>Web Essentials: Course that covered the basics of web design</li>
-							<li>Linux Essentials: Course that taught all about the Linux terminal and how to use it</li>
+							<li><span className='achievments-title'>PC Pro:</span> Course outlining many of the fundamentals of computer and electronic devices management</li>
+							<li><span className='achievments-title'>Networking Pro:</span> Comprehensive course all about computer networking</li>
+							<li><span className='achievments-title'>Web Essentials:</span> Course that covered the basics of web design/development</li>
+							<li><span className='achievments-title'>Linux Essentials:</span> Course that taught all about the Linux terminal and how to use it</li>
+							<li><span className='achievments-title'>Raspberry Pi:</span> Course using the GPIO board on a Rasbperry Pi 3. The Pi I obtained for completing that course is not hosting this site</li>
+							<li><span className='achievments-title'>Mac Essentials:</span> Short course teaching the ins and outs of the Mac Operating System</li>
 						</ul>
-						<li>Computer Programming Classes: Classes offered by the high school that taught all about programming fundamentals</li>
-						<li>Code to Success: Nine week summer boot camp about web development primarily using the React framework</li>
-						<li><a href='https://github.com/seanrcollings/PiSite'>Raspberry Pi Site:</a> A website hosted by my raspberry pi that polls and displays data about the Pi(You're looking at the final product right now)</li>
-						<li><a href='https://github.com/seanrcollings/mastermind'>Mastermind React Game</a>: A version of the Mastermind game that I build using React.</li>
-						<li>MTA Software Development Certification: A test certifying me as knowledgeable in the fundamentals of software development</li>
+						<li><span className='achievments-title'>Computer Programming Classes:</span> Classes offered by the high school that taught all about programming fundamentals</li>
+						<li><span className='achievments-title'>Code to Success:</span> Nine week summer boot camp about web development primarily using the React framework</li>
+						<li><span className='achievments-title'><a href='https://github.com/seanrcollings/PiSite'>Raspberry Pi Site</a>:</span> A website hosted by my raspberry pi that polls and displays data about the Pi(You're looking at the final product right now)</li>
+						<li><span className='achievments-title'><a href='https://github.com/seanrcollings/mastermind'>Mastermind React Game</a>:</span> A version of the Mastermind game that I build using React.</li>
+						<li><span className='achievments-title'>MTA Software Development Certification:</span> A test certifying me as knowledgeable in the fundamentals of software development</li>
 					</ul>
 					<div className='achievments-description description'>
 						<h3 className = 'descriptiopn-title'>Achievements Description</h3>
