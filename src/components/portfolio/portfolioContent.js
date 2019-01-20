@@ -12,7 +12,7 @@ export default class PortfolioContent extends Component {
 				<div className='intro'>
 					<h1 id='title'>Portfolio</h1>
 					<div className='intro-blurb'>
-						<img src = {seanCollings} alt='Sean Collings'/>
+						<img src = {seanCollings} alt='Sean Collings' className='intro-blurb-photo'/>
 						<ul>
 							<li>Sean Collings</li>
 							<li>Ridgeline's Sterling Scholar Representative for Computer Technology</li>

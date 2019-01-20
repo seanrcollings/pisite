@@ -100,3 +100,29 @@
 }
 
 
+@media only screen and (max-width: 48em) {
+    .intro {
+        &-blurb {
+            display: grid;
+            grid-template-rows: [s photo-s] .6fr [photo-e text-s] 1fr [text-e e];
+            grid-template-columns: [s photo-s] 1fr [photo-e links-s] 1fr [link-e e];
+
+            ul {
+                grid-row: text-s/text-e;
+                grid-column: 1/-1;
+                width: 290px;
+
+            }
+
+            img {
+                grid-row: photo-s/photo-e;
+                grid-column: photo-s/photo-e;
+            }
+        }
+
+        &-links {
+            margin-left: 0px;
+        }
+    }
+    
+}

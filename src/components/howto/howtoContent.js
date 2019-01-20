@@ -30,7 +30,7 @@ export default class HowToContent extends Component {
 				<div className = 'development-container'>
 					<h2 id='development'>Setting up the Development Enviorment</h2>
 					<p className = 'content-grid__paragraph'>
-						First off, run <code>git clone https://github.com/seanrcollings/PiSite</code> to pull down the repository, or go 
+						First off, run <code>git clone https://github.com/ seanrcollings/PiSite</code> to pull down the repository, or go 
 						the <a href = 'https://github.com/seanrcollings/PiSite'>GitHub page</a> and download it manually. Now cd into the PiSite directory and
 						run <code>npm install</code> (The Node Package Manager should have come with the node server). This command will install all the
 						dependancies that the Site requires. Now run <code>npm start</code> and the devlopment server should start itself.

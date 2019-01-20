@@ -1,7 +1,7 @@
 /* ========= TITLE ========== */
 
 .home {
-
+    
     &__title {
         position: relative;
         text-align: center;
@@ -64,7 +64,6 @@
         color: white;
         background-image: url('../img/blue.png');
         border-radius: 5px;
-        height: 464px;
 
         &-text {
             align-self: center;
@@ -72,9 +71,38 @@
     }
 
     @media only screen and (max-width: 48em) {
-        .description {
-            float: none;
-            width: auto;
+        .home {
+    
+            &__content {
+                display: grid;
+                grid-template-rows: [s desc-s] 1fr [desc-e widget-s] 1fr [widget-e e];
+                grid-template-columns: [s] 1fr [e];
+            }
+    
+            &__description {
+                grid-row: desc-s/desc-e;
+                grid-column: s/e;
+                height: auto;
+                
+                display: block;
+            }
+    
+            &__widget {
+                grid-row: widget-s/widget-e;
+                grid-column: s/e;
+                height: 500px;
+
+                &-text {
+                    font-size: 11px;
+                }
+            }
+    
+            &__link-boxes {
+                display: none;
+            }
         }
     }
+    
+
 }
+

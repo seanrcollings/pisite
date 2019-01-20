@@ -27,4 +27,21 @@
     &__empty {
         height: 60px;
     }
+
+    &-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 48em) {
+    .stats-types {
+        
+        &__title {
+            font-size: 30px;
+        }
+
+        &__items {
+            display: none;
+        }
+    }
 }
