@@ -32,7 +32,7 @@ export default class NavBar extends Component {
 					<NavBarItem title='Master Mind' path='/mastermind/index.html' reactRoute = {false}/>
 				</div>
 				<div className='mobileNav'>
-					<a onClick = {this.toggleNav}><i class="fas fa-bars"></i></a>
+					<a onClick = {this.toggleNav}><i className="fas fa-bars"></i></a>
 					<AnimateHeight duration = {300} height={this.state.height} className='mobileNav-links'> 
 						<div >
 							<NavBarItem title='Home' path='/' reactRoute = {true} toggleNav = {this.toggleNav}/>
