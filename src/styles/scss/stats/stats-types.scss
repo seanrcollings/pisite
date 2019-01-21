@@ -12,6 +12,7 @@
         margin-bottom: 20px;
         
     }
+
     &__items {
         display: grid;
         grid-template-columns: 1fr;
@@ -35,13 +36,21 @@
 
 @media only screen and (max-width: 48em) {
     .stats-types {
-        
+        display: none;
+    }
+
+    .stats-types-mobile {
+        display: block;
+
         &__title {
-            font-size: 30px;
+            font-size: 25px;
+            font-weight: bold;
+            margin-left: 10px;
         }
 
         &__items {
-            display: none;
+            height: 150px;
+            overflow-y: scroll;
         }
     }
 }

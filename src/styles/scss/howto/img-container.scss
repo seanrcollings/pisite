@@ -8,6 +8,7 @@
     img {
         grid-row: img-s/img-e;
         justify-self: center;
+        margin-bottom: -15px;
     }
 
     &__sub {
@@ -17,4 +18,20 @@
         margin-right: 36px;
     }
 
+}
+
+@media only screen and (max-width: 48em) {
+    .img-container {
+        width: 90vw;
+        padding-bottom: 15px;     
+
+        img {
+            width: 90vw;
+            margin-bottom: -15px;
+        }
+
+        &__sub {
+            margin-right: 0px;
+        }
+    }
 }

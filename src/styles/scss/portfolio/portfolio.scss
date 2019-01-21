@@ -102,26 +102,61 @@
 
 @media only screen and (max-width: 48em) {
     .intro {
+        width: 90vw;
         &-blurb {
             display: grid;
             grid-template-rows: [s photo-s] .6fr [photo-e text-s] 1fr [text-e e];
-            grid-template-columns: [s photo-s] 1fr [photo-e links-s] 1fr [link-e e];
+            grid-template-columns: [s photo-s] 1fr [photo-e links-s] .5fr [link-e e];
 
             ul {
+                margin: 0px;
+                padding: 0px;
                 grid-row: text-s/text-e;
-                grid-column: 1/-1;
-                width: 290px;
+                grid-column: s/link-e;
+                width: 280px;
 
             }
 
             img {
                 grid-row: photo-s/photo-e;
                 grid-column: photo-s/photo-e;
+                
             }
         }
 
         &-links {
+            grid-column: link-s/link-e;
+            
+            display: flex;
+            flex-direction: column;
+
             margin-left: 0px;
+            align-self: center;
+            align-items: center;
+            justify-items: space-around;   
+        }
+    }
+
+    .description {
+        margin-left: 0px;
+        width: 90vw;
+    }
+
+    .certs {
+
+        &-buttons {
+            grid-row: button-s/button-e;
+            width: 90vw;
+
+            &-button {
+                margin-top: 5px;
+            }
+        }
+
+        &-img {
+            grid-row: cert-s/cert-e;
+            width: 90vw;
+             
         }
     }
     

@@ -77,6 +77,10 @@
     padding: 5px;
     height: 26px;
     display: flex;
+
+    &-mobile {
+        display: none;
+    }
     
     a {
         padding: 5px;
@@ -103,6 +107,10 @@
         &__content {
             padding: 10px;
         }
+
+        &__paragraph {
+            margin-left: 10px;
+        }
         
         & > img {
             width: 300px;
@@ -115,8 +123,16 @@
     }
 
     .content-link {
+        display: none;
+
+        &-mobile {
+            font-size: 50px;
+            display: block;
+        }
+
         a {
             padding: 3px;
+            display: none;
         }
     }
 }

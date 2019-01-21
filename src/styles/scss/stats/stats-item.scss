@@ -52,3 +52,34 @@
         }
     }
 }
+
+@media only screen and (max-width: 48em) {
+    .stats-item {
+        width: 90vw;
+        height: 30px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        
+
+        &__title {
+            font-size: 15px;
+
+            &-focused {
+                transform: translateY(-2px);
+            }
+        }
+
+        &__icon {
+            
+            &-focused {
+                transform: rotate(90deg);
+            }
+        }
+
+        &:hover {
+            .stats-item__title {
+                font-size: 17px;
+            }
+        }
+    }
+}
