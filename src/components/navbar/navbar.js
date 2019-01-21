@@ -35,10 +35,10 @@ export default class NavBar extends Component {
 					<a onClick = {this.toggleNav}><i class="fas fa-bars"></i></a>
 					<AnimateHeight duration = {300} height={this.state.height} className='mobileNav-links'> 
 						<div >
-							<NavBarItem title='Home' path='/' reactRoute = {true}/>
-							<NavBarItem title='Pi Stats' path='/stats' reactRoute = {true}/>
-							<NavBarItem title='How To' path='/howto' reactRoute = {true}/>
-							<NavBarItem title='Portfolio' path='/portfolio' reactRoute = {true}/>
+							<NavBarItem title='Home' path='/' reactRoute = {true} toggleNav = {this.toggleNav}/>
+							<NavBarItem title='Pi Stats' path='/stats' reactRoute = {true} toggleNav = {this.toggleNav}/>
+							<NavBarItem title='How To' path='/howto' reactRoute = {true} toggleNav = {this.toggleNav}/>
+							<NavBarItem title='Portfolio' path='/portfolio' reactRoute = {true} toggleNav = {this.toggleNav}/>
 						</div>
 					</AnimateHeight>
 					</div>

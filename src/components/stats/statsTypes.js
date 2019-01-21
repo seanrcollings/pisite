@@ -18,7 +18,6 @@ class StatsTypes extends Component {
 	}
 
 	renderDataTypes(stats) {
-		console.log(stats)
 		return stats.map(stat => {
 			return <StatsItem key={stat.id} title={stat.title} id={stat.id} />
 		})
