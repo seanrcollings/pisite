@@ -42,26 +42,20 @@
     }
 
     .mobileNav {
-        display: block;
+        display: block; 
         font-size: 25px;
 
         &-links {
-            
-            &-hidden {
-                transition: all .3s ease;
-                display: none;
-            }
-
-            &-show {
-                display: block;
-                transition: all .3s ease;
-                position: absolute;
-                background-color: $gray-33;
-                font-size: 15px;
-                z-index: 10;
-                padding-top: 10px;
-                left: 0;
-            }
+            border-radius: 5px;
+            margin-left: -25px;
+            padding: 10px;
+            transition: all .3s ease;
+            position: absolute;
+            background-color: $gray-33;
+            font-size: 15px;
+            z-index: 10;
+            padding-top: 10px;
+            left: 0;
         }
     }
     .desktopNav {

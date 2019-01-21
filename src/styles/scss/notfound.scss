@@ -1,0 +1,31 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/blue.png');
+    height: 93.8vh;
+    color: white;
+
+    h1 {
+        font-size: 80px;
+        margin-top: 0px;
+    }
+
+    h2 {
+        font-size: 70px;
+    }
+
+    h3 {
+        font-size: 50px;
+    }
+
+    &-links {
+        height: auto;
+
+        a {
+           font-size: 30px; 
+        }
+    }
+
+}

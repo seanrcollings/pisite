@@ -7,6 +7,7 @@ import NavBar from './layout';
 import Home from './components/home/home';
 import Stats from './components/stats/statsContent';
 import Portfolio from './components/portfolio/portfolio';
+import NotFound from './notFound'
 
 import HowTo from './components/howto/howto';
 import history from './history';
@@ -30,6 +31,7 @@ ReactDOM.render(
                     <Route path='/stats' component={Stats} />
                     <Route path='/howto' component={HowTo} />
 					<Route path='/portfolio' component={Portfolio} />
+					<Route path='/notfound' component={NotFound} />
 				</NavBar>
 			</Switch>
 		</Router>
