@@ -12,7 +12,7 @@ class StatsWidget extends Component {
   render() {
     return (
       <div className='stats-widget'>
-      <StatsDetails widgetStat = {this.props.stat} />
+        <StatsDetails widgetStat = {this.props.stat} />
       </div>
     );
   }

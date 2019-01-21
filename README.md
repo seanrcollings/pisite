@@ -19,6 +19,17 @@ I used a number of helpful tools to build this site such as:
 * [node.js](https://nodejs.org/en/) - Builds the development enviorment
 * [SCSS](https://sass-lang.com/) - CSS extension
 * [Apache](https://httpd.apache.org/) - Web Server to host the site
-* [Redux](https://redux.js.org/basics/usage-with-react) - Container for global state
+* [Redux](https://redux.js.org/basics/usage-with-react) - Container for global 
 
+### Installation 
+Start up a Development Enviroment
+```
+git clone https://github.com/seanrcollings/PiSite.git
+npm install
+npm start
+```
+And when you're ready to move to Production
+```
+npm build
+```
 Feel free to download the source code and mess around with it yourself!

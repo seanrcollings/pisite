@@ -48,6 +48,7 @@ data_types = [
 	DataType('Temp', 'The internal temperature of the Raspberry Pi', "/opt/vc/bin/vcgencmd measure_temp | grep -o .....C", 8),
 	DataType('Top PID', 'The PID of the process that is using the most CPU time', "ps -Ao pid --sort=-pcpu | head -n 2 | tr -dc '0-9'", 9),
 	DataType('Process Mem', 'The memory usage of the process that is using the most CPU time', "ps -o pmem --sort=-pmem | head -n 2 | tr -dc '0-9'", 10), # fixed up some of these commands so they run on the pi
+	DataType('Site Size', 'The current size (in Megabytes) of the entire website', "du -hs pisiteprod | grep -o '..M'", 11)
 ]
 
 for data_type in data_types:

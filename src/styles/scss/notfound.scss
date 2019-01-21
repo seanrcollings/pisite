@@ -27,5 +27,38 @@
            font-size: 30px; 
         }
     }
+}
 
+@media only screen and (max-width: 48em) {
+    .not-found {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../img/blue.png');
+        height: 90vh;
+        color: white;
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+    
+        h2 {
+            font-size: 30px;
+            justify-self: center;
+        }
+    
+        h3 {
+            font-size: 20px;
+        }
+    
+        &-links {
+            height: auto;
+    
+            a {
+               font-size: 25px; 
+            }
+        }
+    } 
 }
