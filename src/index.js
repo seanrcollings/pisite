@@ -31,7 +31,7 @@ ReactDOM.render(
                     <Route path='/stats' component={Stats} />
                     <Route path='/howto' component={HowTo} />
 					<Route path='/portfolio' component={Portfolio} />
-					<Route path='/notfound' component={NotFound} />
+					<Route component={NotFound} />
 				</NavBar>
 			</Switch>
 		</Router>
