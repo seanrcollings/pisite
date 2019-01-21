@@ -25,15 +25,15 @@ const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.de
 ReactDOM.render(
 	<Provider store={createStoreWithMiddleware(reducers)}>
 		<Router history={history}>
-			<Switch>
-				<NavBar>
+			<NavBar>
+				<Switch>
                     <Route path='/' exact component={Home} />
                     <Route path='/stats' component={Stats} />
                     <Route path='/howto' component={HowTo} />
 					<Route path='/portfolio' component={Portfolio} />
 					<Route component={NotFound} />
-				</NavBar>
-			</Switch>
+				</Switch>
+			</NavBar>
 		</Router>
 	</Provider>
 	, document.getElementById('root'));
