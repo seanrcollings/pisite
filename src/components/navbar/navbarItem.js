@@ -5,7 +5,9 @@ export default class NavBarItem extends Component {
 
 	handlePush() {
 		history.push(this.props.path)
-		this.props.toggleNav()
+		if (this.props.toggleNav !== undefined) {
+			this.props.toggleNav()
+		}
 	}
 
 	renderNavBarItem = () => {
