@@ -62,7 +62,7 @@
     }
 
     &__link {
-        transition: all 1.5s ease;
+        transition: all .8s ease;
         font-size: 15px;
         color: $red-BB;
         opacity: 0;
@@ -87,4 +87,15 @@
     transform: rotate(180deg)
 }
 
+
+@media only screen and (max-width: 48em) {
+    .link-box {
+        margin-left: 0px;
+        width: 77vw;
+
+        &__link {
+            font-size: 12px;
+        }
+    }
+}
 

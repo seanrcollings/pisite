@@ -23,6 +23,7 @@ export default class LinkBox extends Component {
 
 	toggleHeight() {
 		if (this.state.height === 0) {
+			
 			this.setState({ height: 'auto' })
 		} else {
 			this.setState({ height: 0 })
@@ -36,7 +37,7 @@ export default class LinkBox extends Component {
 	render() {
 		return (
 			<div className='link-box-wrapper'>
-				<div className={`link-box ${this.props.className}`} onMouseEnter={() => this.toggleLink()} onMouseLeave={() => this.toggleLink()}>
+				<div className={`link-box ${this.props.className}`} onMouseEnter={ () => this.toggleLink() } onMouseLeave={ () => this.toggleLink() }>
 					<h2 className='link-box__title'>
 						{this.props.title}
 					</h2>

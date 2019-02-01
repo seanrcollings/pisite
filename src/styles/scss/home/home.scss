@@ -76,7 +76,7 @@
     
             &__content {
                 display: grid;
-                grid-template-rows: [s desc-s] 1fr [desc-e widget-s] 1fr [widget-e e];
+                grid-template-rows: [s desc-s] 1fr [desc-e widget-s] .3fr [widget-e link-s] .5fr [link-e e];
                 grid-template-columns: [s] 1fr [e];
             }
     
@@ -99,7 +99,10 @@
             }
     
             &__link-boxes {
-                display: none;
+                grid-row: link-s/link-e;
+                
+                display: block;
+                width: 80vw;
             }
         }
     }
