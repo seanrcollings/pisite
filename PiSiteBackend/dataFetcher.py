@@ -1,8 +1,8 @@
-import json; import hashlib; import subprocess
+import json
+import hashlib
+import subprocess
 
 from dataParsers import *
-
-data_objects = {}
 
 class DataType():
 	def __init__(self, title, description, command, order, parser = False):
@@ -22,7 +22,7 @@ class DataType():
 		else:
 			data = command_output
 			
-		data_objects[self.id] = self.get_object(data)
+		return self.get_object(data)
 
 	def get_object(self, data):
 		return {
@@ -37,7 +37,8 @@ class DataType():
 		return hashlib.sha1(title.encode()).hexdigest()
 
 
-data_types = [
+def fetch_data():
+    data_types = [
 	DataType('Uptime', 'Time since last restart', 'uptime -p', 1),
 	DataType('Current Time', "Current local on the Pi", "date +\%I:\%M\%p", 2), # displays the time in a human understandable format
 	DataType('Current Date', 'Current local date on the Pi', "date +\%d/\%m/\%Y", 3),
@@ -45,14 +46,14 @@ data_types = [
 	DataType('User Count', 'How many users are currently logged into the system, will always be atleast 1', "uptime | grep -o '..users'", 5),
 	DataType('Memory Usage', 'How much memory the Pi is using at the moment', "cat /proc/meminfo | egrep 'MemTotal|MemFree'", 6, parseMemory),
 	DataType('Disk Usage', 'How much space is currently taken up on the Pi', "df -h --total | grep total | grep -o '..%'", 7),
-	DataType('Temp', 'The internal temperature of the Raspberry Pi', "/opt/vc/bin/vcgencmd measure_temp | grep -o .....C", 8),
+	#DataType('Temp', 'The internal temperature of the Raspberry Pi', "/opt/vc/bin/vcgencmd measure_temp | grep -o .....C", 8),
 	DataType('Top PID', 'The PID of the process that is using the most CPU time', "ps -Ao pid --sort=-pcpu | head -n 2 | tr -dc '0-9'", 9),
 	DataType('Process Mem', 'The memory usage of the process that is using the most CPU time', "ps -o pmem --sort=-pmem | head -n 2 | tr -dc '0-9'", 10), # fixed up some of these commands so they run on the pi
-	DataType('Site Size', 'The current size (in Megabytes) of the entire website', "du -hs /var/www/pisite/pisiteprod | grep -o '..M'", 11)
-]
-
-for data_type in data_types:
-	data_type.fetch_data()
-
-with open('/var/www/pisite/pisiteprod/data.json', 'w') as outfile:
-    json.dump(data_objects, outfile)
+	#DataType('Site Size', 'The current size (in Megabytes) of the entire website', "du -hs /var/www/pisite/pisiteprod | grep -o '..M'", 11)
+    ]
+    
+    data_objects = {}
+    for data_type in data_types:
+        data = data_type.fetch_data()
+        data_objects[data["id"]] = data
+    return data_objects
