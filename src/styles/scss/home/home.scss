@@ -43,7 +43,7 @@
         background-color: $gray-E6;
         border-radius: 5px;
         padding: 2em;
-        height: 400px;
+        
     }
 
     &__link-boxes {
@@ -70,43 +70,49 @@
             padding: 0px 10px;
         }
     }
-
-    @media only screen and (max-width: 48em) {
-        .home {
-    
-            &__content {
-                display: grid;
-                grid-template-rows: [s desc-s] 1fr [desc-e widget-s] .3fr [widget-e link-s] .5fr [link-e e];
-                grid-template-columns: [s] 1fr [e];
-            }
-    
-            &__description {
-                grid-row: desc-s/desc-e;
-                grid-column: s/e;
-                height: auto;
-                
-                display: block;
-            }
-    
-            &__widget {
-                grid-row: widget-s/widget-e;
-                grid-column: s/e;
-                height: 300px;
-
-                &-text {
-                    font-size: 11px;
-                }
-            }
-    
-            &__link-boxes {
-                grid-row: link-s/link-e;
-                
-                display: block;
-                width: 80vw;
-            }
-        }
-    }
-    
-
 }
 
+
+@media only screen and (max-width: 48em) {
+    .home {
+
+        &__content {
+            display: grid;
+            grid-template-rows: [s desc-s] 1fr [desc-e widget-s] .3fr [widget-e link-s] .5fr [link-e e];
+            grid-template-columns: [s] 1fr [e];
+        }
+
+        &__description {
+            grid-row: desc-s/desc-e;
+            grid-column: s/e;
+            height: auto;
+            
+            display: block;
+        }
+
+        &__widget {
+            grid-row: widget-s/widget-e;
+            grid-column: s/e;
+            height: 300px;
+
+            &-text {
+                font-size: 11px;
+            }
+        }
+
+        &__link-boxes {
+            grid-row: link-s/link-e;
+            
+            display: block;
+            width: 80vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .home {
+        &__link-boxes {
+            display: block;
+        }
+    }
+}
