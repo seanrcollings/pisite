@@ -1,14 +1,11 @@
-# Pi Site
-
-[![React](https://www.import.io/wp-content/uploads/2017/10/React-logo-1.png)](https://reactjs.org/)
-
+# Pi Site 
+[![logo](https://www.raspberrypi.org/app/uploads/2017/06/Powered-by-Raspberry-Pi-Logo_Outline-Colour-Screen-500x153.png)](http://pisite.zapto.org) 
 [![Build Status](https://travis-ci.org/seanrcollings/PiSite.svg?branch=master)](https://travis-ci.org/seanrcollings/)
 
 A simple website hosted by a Raspberry Pi 3 that:  
   - Polls data from the Pi
   - Hosts My Sterling Scholar Portfolio
   - Hosts a React-based Mastermind game
-
 
 > After obtaining my Raspberry Pi at the end of the Pi course in my IT class, I initially envisioned this as a simple, static
 > website for me to mess around with. The task became quite difficult because I wanted to fetch data from the pi and put on 
@@ -17,7 +14,7 @@ A simple website hosted by a Raspberry Pi 3 that:
 
 ### How does it work? 
 
-I used a number of helpful tools to build this site such as: 
+I used a number of helpful tools to build this site: 
 
 * [React](https://reactjs.org/) - A Javascript library/framework for building the frontend
 * [node.js](https://nodejs.org/en/) - Builds the development enviorment
