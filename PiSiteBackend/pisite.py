@@ -24,6 +24,6 @@ def send_static_asset(path):
 @app.route('/mastermind/static/<path:path>')
 def send_mastermind_static_asset(path):
     return send_from_directory('templates/mastermind/static', path)
-
+ 
 if __name__ == "__main__":
     app.run()

@@ -8,29 +8,34 @@ import HowToContent from './howtoContent'
 export default class HowTo extends Component {
     sidebarItems = [
         {
-            title: 'Installation',
-            link: '#installation'
+            title: 'Project Overview',
+            link: '#introduction'
         },
         {
-            title: 'Development',
-            link: '#development'
+            title: 'Installation',
+            link: '#installation'
         },
         {
             title: 'Starting from Scratch',
             link: '#scratch'
         },
         {
+            title: 'Development',
+            link: '#development'
+        },
+        {
             title: 'Production',
             link: '#production'
         },
         {
-            title: 'SSHing into your pi',
+            title: 'SSHing Into Your Pi',
             link: '#ssh'
         },
         {
             title: 'Installing Apache',
             link: '#apache'
         },
+        
     ]
     render() {
          return (
