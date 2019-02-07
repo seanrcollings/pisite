@@ -8,10 +8,6 @@ import HowToContent from './howtoContent'
 export default class HowTo extends Component {
     sidebarItems = [
         {
-            title: 'Project Overview',
-            link: '#introduction'
-        },
-        {
             title: 'Installation',
             link: '#installation'
         },
