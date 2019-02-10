@@ -24,7 +24,7 @@ export default class Home extends Component {
 
                         <h3>How's it work?</h3>
                         <p>
-                        This project was completed using a variety of different tools. The frontend is built using Facebook’s React library for Javascript and SCSS for better CSS syntax. Along with these are a smattering of small dependencies that helped move the project along faster. Apache is used as as the webserver, but in reality acts more like a reverse-proxy, forwarding requests from the user to the backend. On the backend, Flask—a Python microframework—is used to serve the pages and data requests from the user. Python is also used for the script that actually polls the Raspberry Pi for data. This guide is intended to show you how to get this project in particular running on you own personal Raspberry Pi.
+                        This project was completed using a variety of different tools. The frontend is built using Facebook’s React library for Javascript and SCSS for better CSS syntax. Along with these are a smattering of small dependencies that helped move the project along faster. Apache is used as as the webserver, but in reality acts more like a reverse-proxy, forwarding requests from the user to the backend. On the backend, Flask—a Python microframework—is used to serve the pages and data requests from the user. Python is also used for the script that actually polls the Raspberry Pi for data.
                         </p>
                         <h3>What's it For?</h3>
                         <p>
