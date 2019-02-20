@@ -17,5 +17,5 @@ db.connect()
 def fetch_stats():
     stats = []
     for stat in Stat.select():
-        stats.append([stat.title, stat.subtitle, stat.command, stat.key, stat.weight])
+        stats.append({'title': stat.title, 'subtitle': stat.subtitle, 'command': stat.command, 'key': stat.key, 'weight': stat.weight})
     return stats

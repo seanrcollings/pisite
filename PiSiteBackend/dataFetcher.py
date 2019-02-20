@@ -42,15 +42,13 @@ class DataType():
 def fetch_data():
 	data_types = []
 	for stat in fetch_stats():
-		data_types.append(DataType(stat[0], stat[1], stat[2], stat[4]))
+		data_types.append(DataType(stat['title'], stat['subtitle'], stat['command'], stat['weight']))
 
 	data_objects = {}
 	for data_type in data_types:
 		data = data_type.fetch_data()
 		data_objects[data["id"]] = data
 	return data_objects
-
-print fetch_data()
 
 
 #   data_types = [
