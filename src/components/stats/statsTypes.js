@@ -13,7 +13,7 @@ class StatsTypes extends Component {
 
 	sortDataTypes() {
 		return Object.values(this.props.stats).sort((stat1, stat2) => {
-			return stat1.order - stat2.order
+			return stat1.id - stat2.id
 		})
 	}
 
