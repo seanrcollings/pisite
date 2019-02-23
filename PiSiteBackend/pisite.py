@@ -25,7 +25,7 @@ def data():
     if request.method == 'GET':
         stat_objects = {}
         for stat in get_stats():
-            stat_objects[stat[5]] = {"id": stat[5], "description": stat[2], "title": stat[1], "data": fetch_data(stat[3])}
+            stat_objects[stat[0]] = {"id": stat[0], "title": stat[1], "description": stat[2], "data": fetch_data(stat[3])}
         return json.dumps(stat_objects)
 
 @app.route('/static/<path:path>')
@@ -41,7 +41,7 @@ def send_mastermind_static_asset(path):
 # HELPER FUNCTIONS
 def add_stat(order, title, subtitle, command, parser, Id):
     try:
-        with sqlite3.connect('pisite.db') as connection:
+        with sqlite3.connect('database/pisite.db') as connection:
             cursor = connection.cursor()
             cursor.execute("INSERT INTO stats (ord, title, subtitle, command, id) values (?, ?, ?, ?, ?);", (order, title, subtitle, command, Id))
             result = {'status': 1, 'message': 'Stat Added'}
@@ -50,12 +50,10 @@ def add_stat(order, title, subtitle, command, parser, Id):
     return result
 
 def get_stats():
-    with sqlite3.connect('pisite.db') as connection:
+    with sqlite3.connect('database/pisite.db') as connection:
         cursor = connection.cursor()
-        cursor.execute("SELECT * FROM stats ORDER BY ord desc")
-        all_stats = cursor.fetchall()
-        return all_stats
+        cursor.execute("SELECT rowid,* FROM stats ORDER BY rowid desc")
+        return cursor.fetchall()
  
 if __name__ == "__main__":
     app.run()
-    

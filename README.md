@@ -36,3 +36,8 @@ And when you're ready to move to Production
 npm build
 ```
 Feel free to download the source code and mess around with it yourself!
+
+### Database Creation
+
+- To create Database, run databaseCreation.py and migrate.py
+- To add new migrations, add a new one in database/migrations with a higher value than any of the previous
