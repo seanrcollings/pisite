@@ -1,1 +1,0 @@
-ALTER TABLE stats ADD COLUMN special_text TEXT;
