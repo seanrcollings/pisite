@@ -1,8 +1,7 @@
 from flask import Flask, jsonify, render_template, send_from_directory, request
 from flask_cors import CORS
 import json
-import sys
-from dataFetcher import fetch_data
+import sys 
 
 from models.stat import Stat
 

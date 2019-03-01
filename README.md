@@ -23,6 +23,7 @@ I used a number of helpful tools to build this site:
 * [Apache](https://httpd.apache.org/) - Web Server to host the site
 * [Redux](https://redux.js.org/basics/usage-with-react) - Container for global state
 * [Flask](http://flask.pocoo.org/) - Python Microframework for the backend
+* [SQLite](https://www.sqlite.org/index.html) - Lightweight SQL database engine
 
 ### Installation 
 Start up a Development Enviroment
