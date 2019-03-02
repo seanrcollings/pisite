@@ -1,4 +1,4 @@
-from databaseRecord import DatabaseRecord
+from .databaseRecord import DatabaseRecord
 import subprocess
 
 class Stat(DatabaseRecord):

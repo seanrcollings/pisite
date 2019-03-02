@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, render_template, send_from_directory, request
-from flask_cors import CORS
+# from flask_cors import CORS
 import json
 import sys 
 
@@ -7,7 +7,7 @@ from models.stat import Stat
 
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/stats/*": {"origins": "*"}})
+# cors = CORS(app, resources={r"/stats/*": {"origins": "*"}})
 
 #ROUTES
 
@@ -35,7 +35,6 @@ def send_static_asset(path):
 @app.route('/mastermind/static/<path:path>')
 def send_mastermind_static_asset(path):
     return send_from_directory('templates/mastermind/static', path)
-
  
 if __name__ == "__main__":
     app.run()
