@@ -6,7 +6,7 @@ import sys
 from models.stat import Stat
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 # cors = CORS(app, resources={r"/stats/*": {"origins": "*"}})
 
 #ROUTES
@@ -30,7 +30,7 @@ def data():
 
 @app.route('/static/<path:path>')
 def send_static_asset(path):
-    return send_from_directory('static', path)
+    return send_from_directory('templates/static', path)
 
 @app.route('/mastermind/static/<path:path>')
 def send_mastermind_static_asset(path):
