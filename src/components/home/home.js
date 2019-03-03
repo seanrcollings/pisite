@@ -10,7 +10,7 @@ export default class Home extends Component {
         return (
             <div className = 'home'>
                 <div className = 'home__title'>
-                    <h1>Welcome to our Pi Site</h1>
+                    <h1>Welcome to MY Pi Site</h1>
                     <img src = {backgroundImg} alt = 'backgroung'/>
                 </div>
 				<div className='home__content'>
