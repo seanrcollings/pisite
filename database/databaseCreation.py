@@ -8,7 +8,6 @@ def drop_table():
         c.execute("DROP TABLE IF EXISTS schema_migrations;")
     return True
 
-
 def create_db():
     with sqlite3.connect('pisite.db') as connection:
         c = connection.cursor()

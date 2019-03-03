@@ -1,13 +1,11 @@
 from flask import Flask, jsonify, render_template, send_from_directory, request
-# from flask_cors import CORS
 import json
 import sys 
 
 from models.stat import Stat
 
 
-app = Flask(__name__, static_url_path='')
-# cors = CORS(app, resources={r"/stats/*": {"origins": "*"}})
+app = Flask(__name__, static_url_path='/')
 
 #ROUTES
 

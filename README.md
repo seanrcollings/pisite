@@ -42,3 +42,8 @@ Feel free to download the source code and mess around with it yourself!
 
 - To create Database, run databaseCreation.py and migrate.py
 - To add new migrations, add a new one in database/migrations with a higher value than any of the previous
+
+### Deploy Process
+- npm run build before commit
+- pull down commit on Pi
+- restart apache
