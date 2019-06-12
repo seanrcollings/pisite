@@ -5,7 +5,7 @@ class DatabaseRecord:
     
     @classmethod
     def fetch_all(cls):
-        with sqlite3.connect('database/pisite.db') as connection:
+        with sqlite3.connect('/var/www/pisite/pisiteprod/database/pisite.db') as connection:
             cursor = connection.cursor()
             cursor.execute("SELECT rowid,* FROM %s ORDER BY rowid desc" % (cls.table_name()))
             names = [description[0] for description in cursor.description]
