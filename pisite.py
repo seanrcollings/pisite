@@ -18,7 +18,7 @@ def catch_all(path):
 def mastermind():
     return render_template('mastermind/index.html')
 
-@app.route('/stats/data', methods=['GET', 'POST'])
+@app.route('/stats/data')
 def data():
     if request.method == 'GET':
         stat_objects = {}
@@ -33,6 +33,6 @@ def send_static_asset(path):
 @app.route('/mastermind/static/<path:path>')
 def send_mastermind_static_asset(path):
     return send_from_directory('templates/mastermind/static', path)
- 
+
 if __name__ == "__main__":
     app.run()
