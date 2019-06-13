@@ -6,6 +6,7 @@ import cts from '../../img/certs/cts.png';
 import netPro from '../../img/certs/netPro.png';
 import pcPro from '../../img/certs/pcPro.png';
 import mta from '../../img/certs/mta.png'; 
+import comptia from '../../img/certs/a+.png'; 
 
 class PortfolioCerts extends Component {
   constructor(props) {
@@ -24,6 +25,12 @@ class PortfolioCerts extends Component {
           img: pcPro,
           description: '',
           alt: 'PC Pro'
+        },
+        comptia: {
+          name: 'Comptia A+',
+          img: comptia,
+          description: '',
+          alt: 'Comptia A+'
         },
         cts: {
           name: 'Code To Success',

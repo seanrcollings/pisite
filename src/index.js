@@ -27,9 +27,9 @@ ReactDOM.render(
 		<Router history={history}>
 			<NavBar>
 				<Switch>
-                    <Route path='/' exact component={Home} />
-                    <Route path='/stats' component={Stats} />
-                    <Route path='/howto' component={HowTo} />
+					<Route path='/' exact component={Home} />
+					<Route path='/stats' component={Stats} />
+					<Route path='/howto' component={HowTo} />
 					<Route path='/portfolio' component={Portfolio} />
 					<Route component={NotFound} />
 				</Switch>

@@ -23,6 +23,7 @@ I used a number of helpful tools to build this site:
 * [Apache](https://httpd.apache.org/) - Web Server to host the site
 * [Redux](https://redux.js.org/basics/usage-with-react) - Container for global state
 * [Flask](http://flask.pocoo.org/) - Python Microframework for the backend
+* [SQLite](https://www.sqlite.org/index.html) - Lightweight SQL database engine
 
 ### Installation 
 Start up a Development Enviroment
@@ -36,3 +37,13 @@ And when you're ready to move to Production
 npm build
 ```
 Feel free to download the source code and mess around with it yourself!
+
+### Database Creation
+
+- To create Database, run databaseCreation.py and migrate.py
+- To add new migrations, add a new one in database/migrations with a higher value than any of the previous
+
+### Deploy Process
+- npm run build before commit
+- pull down commit on Pi
+- restart apache

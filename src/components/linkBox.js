@@ -49,9 +49,9 @@ export default class LinkBox extends Component {
 					<p className='link-box__subtitle' >
 						{this.props.subTitle}
 					</p>
-						<a href = {this.props.link} onClick = {() => this.handlePush()} className = {`link-box__link ${this.state.linkStateClass}`}>
-							{this.props.linkName} <i className="fas fa-caret-right"></i>
-						</a>
+					<a href = {this.props.link} onClick = {() => this.handlePush()} className = {`link-box__link ${this.state.linkStateClass}`}>
+						{this.props.linkName} <i className="fas fa-caret-right"></i>
+					</a>
 					
 					<AnimateHeight duration = {300} height = {this.state.height} className = 'link-box__description'>
 						<div>
