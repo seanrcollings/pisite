@@ -28,8 +28,8 @@ export default class NavBar extends Component {
 					<Logo path='/' />
 					<NavBarItem title='Pi Stats' path='/stats' reactRoute = {true}/>
 					<NavBarItem title='How To' path='/howto' reactRoute = {true}/>
-					<NavBarItem title='Portfolio' path='/portfolio' reactRoute = {true}/>
-					<NavBarItem title='Master Mind' path='/mastermind/index.html' reactRoute = {false}/>
+					{/* <NavBarItem title='Portfolio' path='/portfolio' reactRoute = {true}/> */}
+					<NavBarItem title='Master Mind' path='http://mastermind.seanrcollings.com' reactRoute = {false}/>
 				</div>
 				<div className='mobileNav'>
 					<a onClick = {this.toggleNav}><i className="fas fa-bars"></i></a>
@@ -38,7 +38,7 @@ export default class NavBar extends Component {
 							<NavBarItem title='Home' path='/' reactRoute = {true} toggleNav = {this.toggleNav}/>
 							<NavBarItem title='Pi Stats' path='/stats' reactRoute = {true} toggleNav = {this.toggleNav}/>
 							<NavBarItem title='How To' path='/howto' reactRoute = {true} toggleNav = {this.toggleNav}/>
-							<NavBarItem title='Portfolio' path='/portfolio' reactRoute = {true} toggleNav = {this.toggleNav}/>
+							{/* <NavBarItem title='Portfolio' path='/portfolio' reactRoute = {true} toggleNav = {this.toggleNav}/> */}
 						</div>
 					</AnimateHeight>
 					</div>
