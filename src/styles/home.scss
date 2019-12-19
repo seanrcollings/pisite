@@ -1,0 +1,114 @@
+/* ========= TITLE ========== */
+
+.home {
+  &__title {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 80vh;
+    width: 100vw;
+
+    h1 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    img {
+      width: 100%;
+      height: 75vh;
+      object-fit: cover;
+    }
+  }
+
+  /* ========= CONTENT ========== */
+
+  &__content {
+    display: grid;
+    grid-template-rows: 1fr [link-s] 0.5fr [link-e];
+    grid-template-columns: [s desc-s] 1fr [desc-e widget-s] 1fr [widget-e e];
+    grid-gap: 20px;
+    margin: 22px;
+
+    img {
+      width: 450px;
+      height: 450px;
+      justify-self: center;
+    }
+  }
+
+  &__description {
+    background-color: $gray-E6;
+    border-radius: 5px;
+    padding: 2em;
+  }
+
+  &__link-boxes {
+    grid-row: link-s/link-e;
+    grid-column: s/e;
+
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__widget {
+    grid-column: widget-s/widget-e;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-image: url("../img/blue.png");
+    border-radius: 5px;
+
+    &-text {
+      text-align: center;
+      padding: 0px 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .home {
+    &__content {
+      display: grid;
+      grid-template-rows: [s desc-s] 1fr [desc-e widget-s] 0.3fr [widget-e link-s] 0.5fr [link-e e];
+      grid-template-columns: [s] 1fr [e];
+    }
+
+    &__description {
+      grid-row: desc-s/desc-e;
+      grid-column: s/e;
+      height: auto;
+
+      display: block;
+    }
+
+    &__widget {
+      grid-row: widget-s/widget-e;
+      grid-column: s/e;
+      height: 300px;
+
+      &-text {
+        font-size: 11px;
+      }
+    }
+
+    &__link-boxes {
+      grid-row: link-s/link-e;
+
+      display: block;
+      width: 80vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .home {
+    &__link-boxes {
+      display: block;
+    }
+  }
+}
