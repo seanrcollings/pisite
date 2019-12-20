@@ -14,7 +14,8 @@ export default class Stats extends Component {
         name: "",
         data: "No Stat Selected",
         description: "Please Select a Stat to See it's Data"
-      }
+      },
+      timer: null
     };
   }
 
@@ -25,6 +26,15 @@ export default class Stats extends Component {
   }
 
   setFocused = stat => {
+    this.fetchStatData(stat);
+    clearInterval(this.state.interval);
+    this.setState({
+      timer: setInterval(() => this.fetchStatData(stat), 10000)
+    });
+  };
+
+  fetchStatData = stat => {
+    console.log("fetching data...");
     statAPI.get(`/stats/${stat.id}/data`).then(res => {
       this.setState({ focused: { ...stat, data: res.data } });
     });
@@ -44,7 +54,7 @@ export default class Stats extends Component {
             Scroll down to see more stats
           </div>
           <div className="stats-content__tip">
-            Data is automatically refreshed every minute or so. No need to
+            Data is automatically refreshed every ten seconds or so. No need to
             reload the page!
           </div>
         </div>
