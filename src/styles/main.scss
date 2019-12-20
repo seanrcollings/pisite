@@ -25,6 +25,13 @@
 // NOT FOUND
 @import "notfound";
 
+html,
+body {
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   font-family: $mont;
   color: $gray-4D;

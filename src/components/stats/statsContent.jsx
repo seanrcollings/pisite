@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 
 import StatsTypes from "./statsTypes";
 import StatsDetails from "./statsDetails";
@@ -19,14 +18,14 @@ export default class Stats extends Component {
     };
   }
 
-  async componentDidMount() {
-    await statAPI.get("/stats").then(res => {
+  componentDidMount() {
+    statAPI.get("/stats").then(res => {
       this.setState({ stats: res.data });
     });
   }
 
   setFocused = stat => {
-    axios.get(`http://192.168.0.4/stats/${stat.id}/data`).then(res => {
+    statAPI.get(`/stats/${stat.id}/data`).then(res => {
       this.setState({ focused: { ...stat, data: res.data } });
     });
   };

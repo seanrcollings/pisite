@@ -44,10 +44,10 @@
   .mobileNav {
     display: block;
     font-size: 25px;
+    margin-left: 20px;
 
     &-links {
       border-radius: 5px;
-      margin-left: -25px;
       padding: 10px;
       transition: all 0.3s ease;
       position: absolute;
