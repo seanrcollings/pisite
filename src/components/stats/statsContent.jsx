@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import StatsTypes from "./statsTypes";
 import StatsDetails from "./statsDetails";
@@ -9,22 +10,37 @@ export default class Stats extends Component {
     super(props);
     this.state = {
       stats: [],
-      focused: null
+      focused: {
+        id: null,
+        name: "",
+        data: "No Stat Selected",
+        description: "Please Select a Stat to See it's Data"
+      }
     };
   }
 
-  componentDidMount() {
-    statAPI.get("/stats", result => {
-      this.setState({ stats: result.data });
+  async componentDidMount() {
+    await statAPI.get("/stats").then(res => {
+      this.setState({ stats: res.data });
     });
   }
+
+  setFocused = stat => {
+    axios.get(`http://192.168.0.4/stats/${stat.id}/data`).then(res => {
+      this.setState({ focused: { ...stat, data: res.data } });
+    });
+  };
 
   render() {
     return (
       <div className="stats-grid">
         <div className="stats-content">
-          <StatsTypes stats={this.state.stats} />
-          <StatsDetails />
+          <StatsTypes
+            stats={this.state.stats}
+            focused={this.state.focused.id}
+            setFocused={this.setFocused}
+          />
+          <StatsDetails focused={this.state.focused} />
           <div className="stats-content__scroll-tip">
             Scroll down to see more stats
           </div>

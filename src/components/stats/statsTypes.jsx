@@ -11,7 +11,14 @@ export default class StatsTypes extends Component {
 
   renderDataTypes(stats) {
     return stats.map(stat => {
-      return <StatsItem key={stat.id} title={stat.name} id={stat.id} />;
+      return (
+        <StatsItem
+          key={stat.id}
+          stat={stat}
+          focused={this.props.focused}
+          setFocused={this.props.setFocused}
+        />
+      );
     });
   }
 

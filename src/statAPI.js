@@ -8,9 +8,8 @@ class StatAPI {
         : "http://api.pisite.seanrcollings.com";
   }
 
-  async get(endpoint, callback) {
-    const result = await axios.get(this.baseURL + endpoint);
-    callback(result);
+  get(endpoint) {
+    return axios.get(this.baseURL + endpoint);
   }
 }
 

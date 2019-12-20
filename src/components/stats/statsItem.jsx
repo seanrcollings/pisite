@@ -1,27 +1,24 @@
 import React, { Component } from "react";
 
 export default class StatsItem extends Component {
-  handleDetailSwap() {
-    this.props.swapDescription(this.props.id);
-  }
-
   render() {
-    const focusedID = this.props.focused;
-    const id = this.props.id;
+    const focused = this.props.focused;
     return (
       <div
-        className={`stats-item ${focusedID === id ? "stats-item-focused" : ""}`}
-        onClick={() => this.handleDetailSwap()}
+        className={`stats-item ${
+          focused === this.props.stat.id ? "stats-item-focused" : ""
+        }`}
+        onClick={() => this.props.setFocused(this.props.stat)}
       >
         <div
           className={`stats-item__title ${
-            focusedID === id ? "stats-item__title-focused" : ""
+            focused === this.props.stat.id ? "stats-item__title-focused" : ""
           }`}
         >
-          {this.props.title}
+          {this.props.stat.name}
           <i
             className={`stats-item__icon ${
-              focusedID === id ? "stats-item__icon-focused" : ""
+              focused === this.props.stat.id ? "stats-item__icon-focused" : ""
             } fas fa-caret-right`}
           ></i>
         </div>
