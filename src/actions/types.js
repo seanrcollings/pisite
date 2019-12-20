@@ -1,3 +1,0 @@
-export const SWAP_DESCRIPTION = 'SWAP_DESCRIPTION';
-export const SET_STATS = 'SET_STATS';
-export const SELECT_WIDGET_STAT = 'SELECT_WIDGET_STAT';

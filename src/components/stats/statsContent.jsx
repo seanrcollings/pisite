@@ -2,13 +2,28 @@ import React, { Component } from "react";
 
 import StatsTypes from "./statsTypes";
 import StatsDetails from "./statsDetails";
+import statAPI from "../../statAPI";
 
-class Stats extends Component {
+export default class Stats extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      stats: [],
+      focused: null
+    };
+  }
+
+  componentDidMount() {
+    statAPI.get("/stats", result => {
+      this.setState({ stats: result.data });
+    });
+  }
+
   render() {
     return (
       <div className="stats-grid">
         <div className="stats-content">
-          <StatsTypes />
+          <StatsTypes stats={this.state.stats} />
           <StatsDetails />
           <div className="stats-content__scroll-tip">
             Scroll down to see more stats
@@ -24,5 +39,3 @@ class Stats extends Component {
     );
   }
 }
-
-export default Stats;

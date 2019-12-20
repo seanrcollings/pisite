@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import * as actions from "../../actions";
 import StatsDetails from "../stats/statsDetails";
 
-class StatsWidget extends Component {
+export default class StatsWidget extends Component {
   componentDidMount() {
     this.props.fetchStats();
   }
@@ -16,14 +14,3 @@ class StatsWidget extends Component {
     );
   }
 }
-
-function mapStateToProps(state) {
-  let stat = Object.values(state.stats.stats)[
-    Math.floor(Math.random() * Object.values(state.stats.stats).length)
-  ];
-  return {
-    stat
-  };
-}
-
-export default connect(mapStateToProps, actions)(StatsWidget);

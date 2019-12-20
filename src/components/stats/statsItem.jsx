@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import * as actions from "../../actions";
 
-class StatsItem extends Component {
+export default class StatsItem extends Component {
   handleDetailSwap() {
     this.props.swapDescription(this.props.id);
   }
@@ -31,12 +29,3 @@ class StatsItem extends Component {
     );
   }
 }
-
-function mapStateToProps(state) {
-  const focused = state.stats.focused;
-  return {
-    focused
-  };
-}
-
-export default connect(mapStateToProps, actions)(StatsItem);

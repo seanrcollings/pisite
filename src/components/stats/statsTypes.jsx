@@ -1,15 +1,8 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import * as actions from "../../actions";
 
 import StatsItem from "./statsItem";
 
-class StatsTypes extends Component {
-  componentDidMount() {
-    this.props.fetchStats();
-    setInterval(this.props.fetchStats, 30000);
-  }
-
+export default class StatsTypes extends Component {
   sortDataTypes() {
     return Object.values(this.props.stats).sort((stat1, stat2) => {
       return stat1.id - stat2.id;
@@ -18,13 +11,13 @@ class StatsTypes extends Component {
 
   renderDataTypes(stats) {
     return stats.map(stat => {
-      return <StatsItem key={stat.id} title={stat.title} id={stat.id} />;
+      return <StatsItem key={stat.id} title={stat.name} id={stat.id} />;
     });
   }
 
   render() {
     return [
-      <div className="stats-types">
+      <div className="stats-types" key="desktop">
         <div className="stats-types__title">Data Types</div>
         <div className="stats-types__items">
           {this.renderDataTypes(this.sortDataTypes())}
@@ -32,7 +25,7 @@ class StatsTypes extends Component {
         </div>
       </div>,
 
-      <div className="stats-types-mobile">
+      <div className="stats-types-mobile" key="mobile">
         <div className="stats-types-mobile__title">Data Types</div>
         <div className="stats-types-mobile__items">
           {this.renderDataTypes(this.sortDataTypes())}
@@ -42,12 +35,3 @@ class StatsTypes extends Component {
     ];
   }
 }
-
-function mapStateToProps(state) {
-  const { stats } = state.stats;
-  return {
-    stats
-  };
-}
-
-export default connect(mapStateToProps, actions)(StatsTypes);
