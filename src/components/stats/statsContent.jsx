@@ -27,16 +27,18 @@ export default class Stats extends Component {
 
   setFocused = stat => {
     this.fetchStatData(stat);
-    clearInterval(this.state.interval);
+    clearInterval(this.state.timer);
+
     this.setState({
       timer: setInterval(() => this.fetchStatData(stat), 10000)
     });
   };
 
   fetchStatData = stat => {
-    console.log("fetching data...");
     statAPI.get(`/stats/${stat.id}/data`).then(res => {
-      this.setState({ focused: { ...stat, data: res.data } });
+      this.setState({
+        focused: { ...stat, data: res.data }
+      });
     });
   };
 
