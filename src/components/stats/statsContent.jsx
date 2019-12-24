@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import StatsTypes from "./statsTypes";
 import StatsDetails from "./statsDetails";
-import statAPI from "../../statAPI";
+import StatAPI from "../../statAPI";
 
 export default class Stats extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ export default class Stats extends Component {
   }
 
   componentDidMount() {
-    statAPI.get("/stats").then(res => {
+    StatAPI.get("/stats").then(res => {
       this.setState({ stats: res.data });
     });
   }
@@ -35,7 +35,7 @@ export default class Stats extends Component {
   };
 
   fetchStatData = stat => {
-    statAPI.get(`/stats/${stat.id}/data`).then(res => {
+    StatAPI.get(`/stats/${stat.id}/data`).then(res => {
       this.setState({
         focused: { ...stat, data: res.data }
       });

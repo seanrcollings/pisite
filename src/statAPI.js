@@ -1,17 +1,9 @@
 import axios from "axios";
 
-class StatAPI {
-  constructor() {
-    this.baseURL =
-      process.env.NODE_ENV === "development"
-        ? "http://192.168.0.4"
-        : "http://api.pisite.seanrcollings.com";
-  }
+const baseURL = process.env.REACT_APP_BASE_API_URL;
 
-  get(endpoint) {
-    return axios.get(this.baseURL + endpoint);
+export default class StatAPI {
+  static get(endpoint) {
+    return axios.get(baseURL + endpoint);
   }
 }
-
-const statAPI = new StatAPI();
-export default statAPI;

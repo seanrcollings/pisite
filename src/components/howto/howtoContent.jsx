@@ -13,6 +13,11 @@ export default class HowToContent extends Component {
         <div className="intro">
           <h1 id="title">How to Make a Raspberry Pi Web Server</h1>
         </div>
+        <h2>
+          NOTE: This guide is horrendously out of date with the state of the
+          project. I hope to update it soon, but just know that it will not
+          result in the same setup as the site is currently using
+        </h2>
         <div className="install-container">
           <h2 id="installation">What you need to install</h2>
           <ul>
