@@ -6,7 +6,6 @@ import "./styles/main.scss";
 import NavBar from "./layout";
 import Home from "./components/home/home";
 import Stats from "./components/stats/statsContent";
-import Portfolio from "./components/portfolio/portfolio";
 import NotFound from "./notFound";
 
 import HowTo from "./components/howto/howto";
@@ -21,7 +20,6 @@ ReactDOM.render(
         <Route path="/" exact component={Home} />
         <Route path="/stats" component={Stats} />
         <Route path="/howto" component={HowTo} />
-        <Route path="/portfolio" component={Portfolio} />
         <Route component={NotFound} />
       </Switch>
     </NavBar>

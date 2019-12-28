@@ -1,28 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class StatsItem extends Component {
-  render() {
-    const focused = this.props.focused;
-    return (
+export default function StatsItem(props) {
+  const focused = props.focused;
+  return (
+    <div
+      className={`stats-item ${
+        focused === props.stat.id ? "stats-item-focused" : ""
+      }`}
+      onClick={() => props.setFocused(props.stat)}
+    >
       <div
-        className={`stats-item ${
-          focused === this.props.stat.id ? "stats-item-focused" : ""
+        className={`stats-item__title ${
+          focused === props.stat.id ? "stats-item__title-focused" : ""
         }`}
-        onClick={() => this.props.setFocused(this.props.stat)}
       >
-        <div
-          className={`stats-item__title ${
-            focused === this.props.stat.id ? "stats-item__title-focused" : ""
-          }`}
-        >
-          {this.props.stat.name}
-          <i
-            className={`stats-item__icon ${
-              focused === this.props.stat.id ? "stats-item__icon-focused" : ""
-            } fas fa-caret-right`}
-          ></i>
-        </div>
+        {props.stat.name}
+        <i
+          className={`stats-item__icon ${
+            focused === props.stat.id ? "stats-item__icon-focused" : ""
+          } fas fa-caret-right`}
+        ></i>
       </div>
-    );
-  }
+    </div>
+  );
 }

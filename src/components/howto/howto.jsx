@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Sidebar from "../ContentPages/sidebar";
 import HowToContent from "./howtoContent";
 
-export default class HowTo extends Component {
-  sidebarItems = [
+export default function HowTo() {
+  const sidebarItems = [
     {
       title: "Installation",
       link: "#installation"
@@ -30,17 +30,15 @@ export default class HowTo extends Component {
       link: "#apache"
     }
   ];
-  render() {
-    return (
-      <div className="content-grid">
-        <HowToContent />
-        <Sidebar sidebarItems={this.sidebarItems} />
-        <div className="clip-path-content"></div>
-        <div className="clip-path-content__border"></div>
-        <a href="#title" className="content-grid__back-to-top">
-          Back To Top
-        </a>
-      </div>
-    );
-  }
+  return (
+    <div className="content-grid">
+      <HowToContent />
+      <Sidebar sidebarItems={sidebarItems} />
+      <div className="clip-path-content"></div>
+      <div className="clip-path-content__border"></div>
+      <a href="#title" className="content-grid__back-to-top">
+        Back To Top
+      </a>
+    </div>
+  );
 }

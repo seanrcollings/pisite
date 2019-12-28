@@ -1,11 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class SidebarItem extends Component {
-  render() {
-    return (
-      <a href={this.props.link}>
-        <li>{this.props.title}</li>
-      </a>
-    );
-  }
+export default function SidebarItem(props) {
+  return (
+    <a href={props.link}>
+      <li>{props.title}</li>
+    </a>
+  );
 }
