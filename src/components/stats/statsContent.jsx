@@ -20,7 +20,7 @@ export default class Stats extends Component {
   }
 
   componentDidMount() {
-    StatAPI.get("/stats").then(res => {
+    StatAPI.getAllStats().then(res => {
       this.setState({ stats: res.data });
     });
   }
@@ -35,7 +35,7 @@ export default class Stats extends Component {
   };
 
   fetchStatData = stat => {
-    StatAPI.get(`/stats/${stat.id}/data`).then(res => {
+    StatAPI.getStatData(stat.id).then(res => {
       this.setState({
         focused: { ...stat, data: res.data }
       });

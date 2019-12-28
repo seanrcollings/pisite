@@ -11,9 +11,9 @@ export default class StatsWidget extends Component {
     }
   };
   componentDidMount() {
-    statAPI.get(`/stats/${Math.ceil(Math.random() * 9)}`).then(res => {
+    statAPI.getStat(Math.ceil(Math.random() * 9)).then(res => {
       const stat = res.data;
-      statAPI.get(`/stats/${stat.id}/data`).then(res => {
+      statAPI.getStatData(stat.id).then(res => {
         this.setState({
           stat: {
             name: stat.name,
