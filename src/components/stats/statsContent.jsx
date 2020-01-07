@@ -15,27 +15,40 @@ export default class Stats extends Component {
         data: "No Stat Selected",
         description: "Please Select a Stat to See it's Data"
       },
-      timer: null
+      timer: null,
+      failed: false
     };
   }
 
   componentDidMount() {
-    StatAPI.getAllStats().then(res => {
-      this.setState({ stats: res.data });
+    StatAPI.getAllStats(response => {
+      if (response.status === 200) {
+        this.setState({ stats: response.data });
+      } else {
+        this.setState({
+          focused: {
+            data: "Data Fetch Failed :(",
+            description:
+              "For one reason or another, I wasn't able to communicate with the Raspberry Pi, likely because it is off. Please check back later, hopefully it's working by then."
+          },
+          failed: true
+        });
+      }
     });
   }
 
   setFocused = stat => {
-    this.fetchStatData(stat);
-    clearInterval(this.state.timer);
-
-    this.setState({
-      timer: setInterval(() => this.fetchStatData(stat), 10000)
-    });
+    if (!this.state.failed) {
+      this.fetchStatData(stat);
+      clearInterval(this.state.timer);
+      this.setState({
+        timer: setInterval(() => this.fetchStatData(stat), 10000)
+      });
+    }
   };
 
   fetchStatData = stat => {
-    StatAPI.getStatData(stat.id).then(res => {
+    StatAPI.getStatData(stat.id, res => {
       this.setState({
         focused: { ...stat, data: res.data }
       });
@@ -51,10 +64,10 @@ export default class Stats extends Component {
             focused={this.state.focused.id}
             setFocused={this.setFocused}
           />
-          <StatsDetails focused={this.state.focused} />
           <div className="stats-content__scroll-tip">
             Scroll down to see more stats
           </div>
+          <StatsDetails focused={this.state.focused} />
           <div className="stats-content__tip">
             Data is automatically refreshed every ten seconds or so. No need to
             reload the page!

@@ -3,15 +3,26 @@ import axios from "axios";
 const baseURL = process.env.REACT_APP_BASE_API_URL;
 
 export default class StatAPI {
-  static getAllStats() {
-    return axios.get(baseURL + "/stats");
+  static getAllStats(callback) {
+    this.statFetcher(baseURL + "/stats", callback);
   }
 
-  static getStat(id) {
-    return axios.get(baseURL + `/stats/${id}`);
+  static getStat(id, callback) {
+    this.statFetcher(baseURL + `/stats/${id}`, callback);
   }
 
-  static getStatData(id) {
-    return axios.get(baseURL + `/stats/${id}/data`);
+  static getStatData(id, callback) {
+    this.statFetcher(baseURL + `/stats/${id}/data`, callback);
   }
+
+  static statFetcher = (url, callback) => {
+    axios
+      .get(url)
+      .then(response => {
+        callback(response);
+      })
+      .catch(error => {
+        callback(error.response);
+      });
+  };
 }
