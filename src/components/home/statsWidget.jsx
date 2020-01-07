@@ -11,17 +11,19 @@ export default class StatsWidget extends Component {
     }
   };
   componentDidMount() {
-    statAPI.getStat(Math.ceil(Math.random() * 9)).then(res => {
-      const stat = res.data;
-      statAPI.getStatData(stat.id).then(res => {
-        this.setState({
-          stat: {
-            name: stat.name,
-            description: stat.description,
-            data: res.data
-          }
+    statAPI.getStat(Math.ceil(Math.random() * 9), res => {
+      if (res.status === 200) {
+        const stat = res.data;
+        statAPI.getStatData(stat.id, res => {
+          this.setState({
+            stat: {
+              name: stat.name,
+              description: stat.description,
+              data: res.data
+            }
+          });
         });
-      });
+      }
     });
   }
 

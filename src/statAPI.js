@@ -22,7 +22,12 @@ export default class StatAPI {
         callback(response);
       })
       .catch(error => {
-        callback(error.response);
+        // Find a better way to check for this
+        if (error.response) {
+          callback(error.response);
+        } else {
+          callback({ response: 500 });
+        }
       });
   };
 }
