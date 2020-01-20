@@ -16,14 +16,15 @@ export default class Stats extends Component {
         description: "Please Select a Stat to See it's Data"
       },
       timer: null,
-      failed: false
+      failed: false,
+      loading: true
     };
   }
 
   componentDidMount() {
     StatAPI.getAllStats(response => {
       if (response.status === 200) {
-        this.setState({ stats: response.data });
+        this.setState({ stats: response.data, loading: false });
       } else {
         this.setState({
           focused: {
@@ -31,7 +32,8 @@ export default class Stats extends Component {
             description:
               "For one reason or another, I wasn't able to communicate with the Raspberry Pi, likely because it is off. Please check back later, hopefully it's working by then."
           },
-          failed: true
+          failed: true,
+          loading: false
         });
       }
     });
@@ -67,7 +69,10 @@ export default class Stats extends Component {
           <div className="stats-content__scroll-tip">
             Scroll down to see more stats
           </div>
-          <StatsDetails focused={this.state.focused} />
+          <StatsDetails
+            focused={this.state.focused}
+            loading={this.state.loading}
+          />
           <div className="stats-content__tip">
             Data is automatically refreshed every ten seconds or so. No need to
             reload the page!
